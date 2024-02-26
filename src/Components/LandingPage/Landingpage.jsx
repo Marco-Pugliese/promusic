@@ -57,6 +57,7 @@ const Landingpage = () => {
           }
         >
           Malù
+          <div className="fs-2 fw-normal">La nostra sala</div>
         </Col>
       </Row>
       <Row
@@ -69,7 +70,7 @@ const Landingpage = () => {
         <Col className="col-3 text-center">
           <Row>
             <Col className="col-12 fw-bold fs-4 py-2 text-main nav-scale hover">
-              Regolamento Sala
+              Regolamento
             </Col>
             <Col className="smaller text-start">
               Da anni il gruppo ProMusic s’impegna a ad essere un punto
@@ -91,7 +92,7 @@ const Landingpage = () => {
         <Col className="col-6 text-center">
           <Row>
             <Col className="col-12 fw-bold fs-4 py-2 text-main hover">
-              Calendario Sala
+              CalendarioÓ
             </Col>
             <Col>
               <img

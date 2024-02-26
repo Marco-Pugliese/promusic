@@ -11,7 +11,7 @@ const Footer = () => {
   const today = new Date();
   return (
     <div className="pt-5 pb-4  mt-5">
-      <Container className="text-center navHover2 mt-2 pb-2 smaller">
+      <Container className="text-center navHover2 mt-5 pt-5 pb-2 smaller">
         <span>
           Associazione Culturale e Musicale ©ProMusic. All rights reserved -{" "}
           <span className="small">{today.getFullYear()}</span>

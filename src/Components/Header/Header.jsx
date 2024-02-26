@@ -20,9 +20,13 @@ const Header = () => {
           className="text-light"
         />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto nav-scale">
-            <Link to="/" className="nav-link fw-bold ps-4  navHover">
-              Home
+          <Nav className="mx-auto nav-scale d-flex align-items-center">
+            <Link to="/" className="nav-link fw-bold ps-4 me-5 navHover">
+              <img
+                src="/assets/images/logo ProMusic copia.png"
+                alt="logo"
+                style={{ width: "50px" }}
+              />{" "}
             </Link>
             <Link to="/info" className="nav-link fw-bold ps-4  navHover">
               Contatti & Info

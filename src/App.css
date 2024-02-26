@@ -7,17 +7,21 @@
 }
 body {
   height: 100%;
-  background: rgb(33, 33, 33);
-  background: linear-gradient(
-    90deg,
-    var(--primary-dark) 0%,
-    var(--primary-dark) 66%,
-    var(--primary-blue) 99%,
-    var(--primary-green) 200%
-  );
   font-family: "Nunito Sans", sans-serif;
   overflow-x: hidden;
   color: white !important;
+}
+.App {
+  background: var(--primary-green) !important;
+}
+#MainContainer {
+  background: linear-gradient(
+    90deg,
+    var(--primary-dark) -250%,
+    #212121fd 33%,
+    transparent 200%,
+    transparent 200%
+  );
 }
 html,
 body,
@@ -25,8 +29,15 @@ body,
   height: 100%;
 }
 .text-main {
-  color: var(--primary-green);
+  color: var(--primary-green) !important;
   transition: all 0.8s;
+}
+.text-gray {
+  color: var(--primary-gray) !important;
+  transition: all 0.8s;
+}
+.border-gray {
+  border-color: var(--primary-gray) !important;
 }
 .text-main:hover {
   color: var(--primary-gray);
@@ -61,12 +72,18 @@ body,
 }
 .navHover2:hover {
   color: white !important;
+  cursor: pointer;
 }
 .navHover2 {
   color: var(--primary-green) !important;
+  transition: all 0.8s;
 }
 .border-topGreen {
   border-top: 1px solid var(--primary-green);
+  transition: all 0.8s;
+}
+.border-topGreen:hover {
+  border-color: white;
 }
 .hover:hover {
   cursor: pointer;
@@ -83,14 +100,19 @@ body,
   margin: auto;
   height: 90vh;
 }
+input:focus {
+  background-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
 
 /* ANIMATIONS */
 
 .bounce-in-left {
-  animation: bounce-in-left 1.1s 2s both;
+  animation: bounce-in-left 1.6s 2s both;
 }
 .bounce-in-left-0 {
-  animation: bounce-in-left 1.1s 0.5s both;
+  animation: bounce-in-left 1.6s 0.5s both;
 }
 
 @keyframes bounce-in-left {

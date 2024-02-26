@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const PartnerPage = () => {
   const [scrollTop, setScrollTop] = useState(0);
@@ -37,7 +38,9 @@ const PartnerPage = () => {
             </div>
             <div className="text-end me-5">
               <span className=" btn btn-main rounded-4 py-1 px-2">
-                JOIN US!
+                <Link to="/joinus" className="nav-link fw-bold px-2">
+                  Iscriviti!
+                </Link>
               </span>
             </div>
           </div>
