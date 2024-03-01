@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
 
 const PartnerPage = () => {
   const [scrollTop, setScrollTop] = useState(0);
@@ -21,7 +20,7 @@ const PartnerPage = () => {
       <Row id="hero">
         <Col className="bounce-in-left p-5 fst-italic bg-darker col-12 col-lg-8 col-xl-7 col-xxl-6 smaller">
           <div className="d-flex flex-column">
-            <div>
+            <div className="mb-4">
               Benvenuti nella nostra comunità musicale! Siamo lieti di
               accogliervi nel nostro spazio dedicato alla passione per la
               musica. Registrandovi, avrete accesso esclusivo alla nostro mondo,
@@ -34,13 +33,14 @@ const PartnerPage = () => {
               richiede pochissimo tempo, e vi garantirà un'esperienza musicale
               arricchente e stimolante. Non perdete l'opportunità di far parte
               di questa straordinaria comunità di appassionati di musica.
-              Registratevi oggi e iniziate il vostro viaggio musicale con noi!
+              <br />
+              <br />
+              Scarica ora il modulo di iscrizione, segui le istruzioni per
+              diventare socio e iniziate il vostro viaggio musicale con noi!
             </div>
             <div className="text-end me-5">
-              <span className=" btn btn-main rounded-4 py-1 px-2">
-                <Link to="/joinus" className="nav-link fw-bold px-2">
-                  Iscriviti!
-                </Link>
+              <span className=" btn btn-main rounded-4 py-1 px-3 display-inline-block">
+                Scarica
               </span>
             </div>
           </div>
@@ -58,7 +58,7 @@ const PartnerPage = () => {
         <Col
           className={
             scrollTop > 10
-              ? "text-center display-4 fw-bold bounce-in-left-0 py-4"
+              ? "text-center display-4 fw-bold fade-in py-4"
               : "d-none"
           }
         >
@@ -68,7 +68,7 @@ const PartnerPage = () => {
       <Row
         className={
           scrollTop > 70
-            ? "text-center bounce-in-right justify-content-center"
+            ? "text-center fade-in justify-content-center"
             : "d-none"
         }
       >
@@ -108,7 +108,7 @@ const PartnerPage = () => {
         <Col
           className={
             scrollTop > 550
-              ? "text-center display-4 fw-bold bounce-in-left-0 py-4"
+              ? "text-center display-4 fw-bold fade-in py-4"
               : "d-none"
           }
         >
@@ -118,7 +118,7 @@ const PartnerPage = () => {
       <Row
         className={
           scrollTop > 670
-            ? "text-center bounce-in-right justify-content-center"
+            ? "text-center fade-in justify-content-center"
             : "d-none"
         }
       >

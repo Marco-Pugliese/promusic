@@ -18,41 +18,51 @@ const Landingpage = () => {
   return (
     <>
       <Row id="hero">
-        <Col className="bounce-in-left p-5 fst-italic bg-darker col-12 col-lg-8 col-xl-7 col-xxl-6 smaller">
-          "La ProMusic è un gruppo di giovani che hanno a cuore la cultura
-          musicale e tutte le forme di arte e intrattenimento, e si propone di
-          creare momenti di socializzazione positiva, di crescita culturale e
-          realizzazioni artistico - musicali. La ProMusic mira a diventare un
-          "luogo" reale e virtuale di incontro di passioni, un crocevia di
-          destini, che si uniscono per trasformare, il luogo in cui vivono in
-          quello che più assomiglia ai sogni di ciascuno. L'arte, la cultura,
-          l'attenzione al sociale, la partecipazione attiva; queste le parole
-          d'ordine, questa la nostra ispirazione, questi i nostri principi. La
-          ProMusic propone attività che riguardano in maniera prevalente il
-          coinvolgimento dei giovani, e di tutti nell’arte della musica. Di
-          fondamentale importanza, nello spirito dell’ Associazione, è il
-          concetto di partecipazione attiva. Il centro polivalente sarà sempre
-          uno spazio aperto alla popolazione, un luogo dove sperimentare e
-          sperimentarsi come cittadino attivo e partecipe al processo di
-          crescita del territorio. Il tessuto giovanile procidano ha sempre dato
-          prova di grande operosità, specie se sollecitato e sostenuto. Invitare
-          alla partecipazione, coinvolgere, accogliere idee è un principio
-          fondamentale della ProMusic."
-        </Col>
+        <Col>
+          <div className=" p-5 ">
+            <Row className="border-blues bg-light">
+              <Col className="fade-in pe-5 fst-italic bg-darker col-12 col-lg-10 col-xl-9 col-xxl-8 smaller text-blue">
+                <div className="m-5 py-5 px-4  w-100">
+                  "La ProMusic è un gruppo di giovani che hanno a cuore la
+                  cultura musicale e tutte le forme di arte e intrattenimento, e
+                  si propone di creare momenti di socializzazione positiva, di
+                  crescita culturale e realizzazioni artistico - musicali. La
+                  ProMusic mira a diventare un "luogo" reale e virtuale di
+                  incontro di passioni, un crocevia di destini, che si uniscono
+                  per trasformare, il luogo in cui vivono in quello che più
+                  assomiglia ai sogni di ciascuno. L'arte, la cultura,
+                  l'attenzione al sociale, la partecipazione attiva; queste le
+                  parole d'ordine, questa la nostra ispirazione, questi i nostri
+                  principi. La ProMusic propone attività che riguardano in
+                  maniera prevalente il coinvolgimento dei giovani, e di tutti
+                  nell’arte della musica. Di fondamentale importanza, nello
+                  spirito dell’ Associazione, è il concetto di partecipazione
+                  attiva. Il centro polivalente sarà sempre uno spazio aperto
+                  alla popolazione, un luogo dove sperimentare e sperimentarsi
+                  come cittadino attivo e partecipe al processo di crescita del
+                  territorio. Il tessuto giovanile procidano ha sempre dato
+                  prova di grande operosità, specie se sollecitato e sostenuto.
+                  Invitare alla partecipazione, coinvolgere, accogliere idee è
+                  un principio fondamentale della ProMusic."
+                </div>
+              </Col>
 
-        <Col className="bounce-in-right fs-1 text-center pt-5 col-12 col-lg-4 col-xl-5 col-xxl-6 d-none d-lg-block">
-          <img
-            src="assets/images/logo ProMusic copia.png"
-            alt="logo"
-            style={{ width: "300px" }}
-          />
+              <Col className="fade-in fs-1 text-center pt-5 col-12 col-lg-2 col-xl-3 col-xxl-4 d-none d-lg-block bg-blue">
+                <img
+                  src="assets/images/logo ProMusic copia.png"
+                  alt="logo"
+                  style={{ width: "300px" }}
+                />
+              </Col>
+            </Row>
+          </div>
         </Col>
       </Row>
       <Row>
         <Col
           className={
             scrollTop > 10
-              ? "text-center display-4 fw-bold bounce-in-left-0 py-4"
+              ? "text-center display-4 fw-bold fade-in py-4"
               : "d-none"
           }
         >
@@ -63,7 +73,7 @@ const Landingpage = () => {
       <Row
         className={
           scrollTop > 70
-            ? "text-center bounce-in-right justify-content-center"
+            ? "text-center fade-in justify-content-center"
             : "d-none"
         }
       >
@@ -72,7 +82,7 @@ const Landingpage = () => {
             <Col className="col-12 fw-bold fs-4 py-2 text-main nav-scale hover">
               Regolamento
             </Col>
-            <Col className="smaller text-start">
+            <Col className="smaller text-start ">
               Da anni il gruppo ProMusic s’impegna a ad essere un punto
               d’incontro tra i diversi gruppi musicali del territorio, favorendo
               e talora coordinando utilizzo di sale prove e realizzazione di
@@ -92,7 +102,7 @@ const Landingpage = () => {
         <Col className="col-6 text-center">
           <Row>
             <Col className="col-12 fw-bold fs-4 py-2 text-main hover">
-              CalendarioÓ
+              Calendario
             </Col>
             <Col>
               <img

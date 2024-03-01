@@ -11,7 +11,6 @@ const InfoPage = () => {
   const [message, setMessage] = useState("");
   const [showSend, setShowSend] = useState(false);
   const [showError, setShowError] = useState(false);
-  // const [clicked, setClicked] = useState(false);
   const [isEverythingChecked, setIsEverythingChecked] = useState(false);
   const check = () => {
     email !== "" && subject !== "" && name !== "" && message.length > 0
@@ -39,10 +38,6 @@ const InfoPage = () => {
 
   return (
     <Container onClick={() => {}} className="mt-5 pt-5" id="contactme">
-      <div className="py-5 mt-5">
-        <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
-        <div className="width-changing pt-0 mb-0 border-bottom gray-border border-shadow-gray "></div>
-      </div>
       <Row className="py-5 my-5">
         <Col className="col-6 fs-1 fw-bold">RESTIAMO IN CONTATTO!</Col>
         <Col>
@@ -61,7 +56,7 @@ const InfoPage = () => {
               className="nav-link mx-2"
               href="https://maps.app.goo.gl/uBaKwPZRb54vLnxc6"
             >
-              Via Marcello Scotti,15, Procida(Na) - 80079
+              Via Marcello Scotti, 15 - Procida(Na) - 80079
             </a>
           </div>
           <div className="d-flex align-items-center my-2">
@@ -72,10 +67,7 @@ const InfoPage = () => {
           </div>
         </Col>
       </Row>
-      <div className="py-5 mt-5">
-        <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
-        <div className="width-changing pt-0 mb-0 border-bottom gray-border border-shadow-gray rotate-animation-180"></div>
-      </div>
+
       <form
         ref={form}
         onSubmit={(e) => {
@@ -85,9 +77,9 @@ const InfoPage = () => {
         <Container className="mt-5 pt-5">
           <Row className="pt-5 mt-5">
             <Col className="col-12 col-lg-6 mt-5">
-              <InputGroup className="border-change">
+              <InputGroup className="mt-4">
                 <InputGroup.Text
-                  className="bg-transparent text-gray border-gray"
+                  className="bg-transparent text-gray"
                   id="basic-addon1"
                 >
                   Nome
@@ -96,7 +88,7 @@ const InfoPage = () => {
                   type="text"
                   required
                   name="user_name"
-                  className="bg-transparent text-gray border-gray form-control"
+                  className="bg-transparent text-gray form-control"
                   aria-label="name"
                   aria-describedby="basic-addon1"
                   value={name}
@@ -107,19 +99,18 @@ const InfoPage = () => {
                   }}
                 />
               </InputGroup>
-              <div className="py-3 d-none d-lg-block"></div>
             </Col>
-            <Col className="col-12 col-lg-6 mt-5">
-              <InputGroup className="border-change">
+            <Col className="col-12 col-lg-6">
+              <InputGroup className="mt-4">
                 <InputGroup.Text
-                  className="bg-transparent text-gray border-gray"
+                  className="bg-transparent text-gray"
                   id="basic-addon1"
                 >
                   eMail
                 </InputGroup.Text>
                 <input
                   type="email"
-                  className="bg-transparent text-gray border-gray form-control"
+                  className="bg-transparent text-gray form-control"
                   aria-label="email"
                   aria-describedby="basic-addon1"
                   name="user_email"
@@ -131,19 +122,18 @@ const InfoPage = () => {
                   }}
                 />
               </InputGroup>
-              <div className="py-3"></div>
             </Col>
             <Col className="col-12 col-lg-6 offset-lg-3">
-              <InputGroup className="border-change">
+              <InputGroup className="mt-4">
                 <InputGroup.Text
-                  className="bg-transparent text-gray border-gray"
+                  className="bg-transparent text-gray"
                   id="basic-addon1"
                 >
                   Oggetto
                 </InputGroup.Text>
                 <input
                   required
-                  className="bg-transparent text-gray border-gray form-control"
+                  className="bg-transparent text-gray form-control"
                   aria-label="subject"
                   aria-describedby="basic-addon1"
                   name="user_subject"
@@ -156,15 +146,15 @@ const InfoPage = () => {
                 />
               </InputGroup>
             </Col>
-            <div className="py-3"></div>
+
             <Col className="col-12 h-100">
-              <InputGroup className="border-change h-100">
-                <InputGroup.Text className="bg-transparent text-gray border-gray ">
+              <InputGroup className="mt-4 h-100">
+                <InputGroup.Text className="bg-transparent text-gray ">
                   Testo
                 </InputGroup.Text>
                 <textarea
                   required
-                  className="bg-transparent text-gray border-gray form-control"
+                  className="bg-transparent text-gray form-control"
                   as="textarea"
                   aria-label="With textarea"
                   name="message"

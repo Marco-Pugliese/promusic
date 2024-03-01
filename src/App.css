@@ -12,25 +12,47 @@ body {
   color: white !important;
 }
 .App {
-  background: var(--primary-green) !important;
+  animation: bg-change 9s ease-in infinite alternate-reverse both;
+}
+@keyframes bg-change {
+  0% {
+    background-color: #10425dae;
+  }
+  50% {
+    background-color: rgba(255, 63, 63, 0.76);
+  }
+  100% {
+    background-color: #212121c8;
+  }
 }
 #MainContainer {
-  background: linear-gradient(
-    90deg,
-    var(--primary-dark) -250%,
-    #212121fd 33%,
-    transparent 200%,
-    transparent 200%
-  );
+  background: transparent;
 }
 html,
 body,
 #root {
   height: 100%;
+  overflow-x: hidden;
+}
+.fullwidth {
+  width: 101vw;
 }
 .text-main {
+  color: white !important;
+  transition: all 0.8s;
+}
+.mini-scale {
+  scale: 1.4 !important;
+}
+.text-green {
   color: var(--primary-green) !important;
   transition: all 0.8s;
+}
+.text-main:hover {
+  color: var(--primary-blue) !important;
+}
+.text-blue {
+  color: var(--primary-blue) !important;
 }
 .text-gray {
   color: var(--primary-gray) !important;
@@ -39,9 +61,7 @@ body,
 .border-gray {
   border-color: var(--primary-gray) !important;
 }
-.text-main:hover {
-  color: var(--primary-gray);
-}
+
 .nav-scale > *:hover {
   scale: 1.09;
 }
@@ -61,36 +81,63 @@ body,
   border-color: white !important;
   background-color: white !important;
 }
-.navHover {
-  background-color: transparent;
-  color: var(--primary-gray) !important;
-  transition: all 0.8s !important;
-  border-radius: 30px;
+#navbar {
+  transition: all 0.8s ease-in-out;
 }
-.navHover:hover {
-  color: var(--primary-green) !important;
-}
-.navHover2:hover {
-  color: white !important;
+
+#navbar:hover {
+  background-color: var(--primary-blue);
+  box-shadow: 0px 10px 25px -5px var(--primary-blue);
   cursor: pointer;
 }
-.navHover2 {
+.text-white {
+  transition: all 0.9s !important;
+}
+.border-blues {
+  border: 10px solid var(--primary-blue) !important;
+}
+
+.navbarElementClicked {
   color: var(--primary-green) !important;
+  transition: all 0.8s !important;
+}
+.navbarElementHovered {
+  color: var(--primary-gray) !important;
+  transition: all 0.8s !important;
+}
+.navbarElementHovered:hover {
+  color: var(--primary-green) !important;
+}
+.navbarElement {
+  color: var(--primary-blue) !important;
   transition: all 0.8s;
 }
+.bg-blue {
+  background-color: #10425d !important;
+}
+.navHover2 {
+  color: var(--primary-gray) !important;
+  transition: all 0.8s;
+}
+.navHover2:hover {
+  color: var(--primary-green) !important;
+  cursor: pointer;
+}
 .border-topGreen {
-  border-top: 1px solid var(--primary-green);
+  border-top: 1px solid var(--primary-gray);
   transition: all 0.8s;
 }
 .border-topGreen:hover {
-  border-color: white;
+  border-color: var(--primary-green);
 }
 .hover:hover {
   cursor: pointer;
 }
+.extrasmall,
 .extrasmall > * {
   font-size: 0.7em;
 }
+
 .smaller {
   font-size: 0.9em;
 }
@@ -100,111 +147,31 @@ body,
   margin: auto;
   height: 90vh;
 }
+
+.input-group-text,
+input,
+textarea {
+  border: 1px solid var(--primary-blue) !important;
+  color: var(--primary-dark) !important;
+}
 input:focus {
   background-color: transparent !important;
   outline: none !important;
   box-shadow: none !important;
 }
-
+ƒ
 /* ANIMATIONS */
 
-.bounce-in-left {
-  animation: bounce-in-left 1.6s 2s both;
-}
-.bounce-in-left-0 {
-  animation: bounce-in-left 1.6s 0.5s both;
+.fade-in {
+  animation: fade-in 2.7s 0.8s both;
 }
 
-@keyframes bounce-in-left {
+@keyframes fade-in {
   0% {
-    transform: translateX(-600px);
-
-    animation-timing-function: ease-in;
     opacity: 0;
   }
-  38% {
-    transform: translateX(0);
 
-    animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  55% {
-    transform: translateX(-68px);
-
-    animation-timing-function: ease-in;
-  }
-  72% {
-    transform: translateX(0);
-
-    animation-timing-function: ease-out;
-  }
-  81% {
-    transform: translateX(-28px);
-
-    animation-timing-function: ease-in;
-  }
-  90% {
-    transform: translateX(0);
-
-    animation-timing-function: ease-out;
-  }
-  95% {
-    transform: translateX(-8px);
-
-    animation-timing-function: ease-in;
-  }
   100% {
-    transform: translateX(0);
-
-    animation-timing-function: ease-out;
-  }
-}
-
-.bounce-in-right {
-  animation: bounce-in-right 1.1s 0.8s both;
-}
-
-@keyframes bounce-in-right {
-  0% {
-    transform: translateX(600px);
-
-    animation-timing-function: ease-in;
-    opacity: 0;
-  }
-  38% {
-    transform: translateX(0);
-
-    animation-timing-function: ease-out;
     opacity: 1;
-  }
-  55% {
-    transform: translateX(68px);
-
-    animation-timing-function: ease-in;
-  }
-  72% {
-    transform: translateX(0);
-
-    animation-timing-function: ease-out;
-  }
-  81% {
-    transform: translateX(32px);
-
-    animation-timing-function: ease-in;
-  }
-  90% {
-    transform: translateX(0);
-
-    animation-timing-function: ease-out;
-  }
-  95% {
-    transform: translateX(8px);
-
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: translateX(0);
-
-    animation-timing-function: ease-out;
   }
 }
