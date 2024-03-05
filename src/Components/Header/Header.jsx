@@ -15,7 +15,7 @@ const Header = () => {
       onMouseLeave={() => {
         setNavHover(false);
       }}
-      className=" bg-white  py-4"
+      className={navHover === true ? "bg-2" : "bg-1"}
     >
       <Container fluid className="py-2">
         <Navbar.Brand
@@ -66,7 +66,7 @@ const Header = () => {
               to="/"
               className={
                 navHover === true
-                  ? "nav-link d-lg-none d-block fw-bold ps-4 navbarElementHovered"
+                  ? "nav-link d-lg-none d-block fw-bold ps-4 navbarElement"
                   : "nav-link d-lg-none d-block fw-bold ps-4 navbarElement"
               }
             >

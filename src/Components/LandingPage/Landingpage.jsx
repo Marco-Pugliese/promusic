@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import HeroSection from "./HeroSection";
+import SalaProve from "./SalaProve";
 
 const Landingpage = () => {
   const [scrollTop, setScrollTop] = useState(0);
+  const [navHover, setNavHover] = useState(false);
+  // const [navHover2, setNavHover2] = useState(false);
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -17,51 +21,13 @@ const Landingpage = () => {
   }, []);
   return (
     <>
-      <Row id="hero">
-        <Col>
-          <div className=" p-5 ">
-            <Row className="border-blues bg-light">
-              <Col className="fade-in pe-5 fst-italic bg-darker col-12 col-lg-10 col-xl-9 col-xxl-8 smaller text-blue">
-                <div className="m-5 py-5 px-4  w-100">
-                  "La ProMusic è un gruppo di giovani che hanno a cuore la
-                  cultura musicale e tutte le forme di arte e intrattenimento, e
-                  si propone di creare momenti di socializzazione positiva, di
-                  crescita culturale e realizzazioni artistico - musicali. La
-                  ProMusic mira a diventare un "luogo" reale e virtuale di
-                  incontro di passioni, un crocevia di destini, che si uniscono
-                  per trasformare, il luogo in cui vivono in quello che più
-                  assomiglia ai sogni di ciascuno. L'arte, la cultura,
-                  l'attenzione al sociale, la partecipazione attiva; queste le
-                  parole d'ordine, questa la nostra ispirazione, questi i nostri
-                  principi. La ProMusic propone attività che riguardano in
-                  maniera prevalente il coinvolgimento dei giovani, e di tutti
-                  nell’arte della musica. Di fondamentale importanza, nello
-                  spirito dell’ Associazione, è il concetto di partecipazione
-                  attiva. Il centro polivalente sarà sempre uno spazio aperto
-                  alla popolazione, un luogo dove sperimentare e sperimentarsi
-                  come cittadino attivo e partecipe al processo di crescita del
-                  territorio. Il tessuto giovanile procidano ha sempre dato
-                  prova di grande operosità, specie se sollecitato e sostenuto.
-                  Invitare alla partecipazione, coinvolgere, accogliere idee è
-                  un principio fondamentale della ProMusic."
-                </div>
-              </Col>
-
-              <Col className="fade-in fs-1 text-center pt-5 col-12 col-lg-2 col-xl-3 col-xxl-4 d-none d-lg-block bg-blue">
-                <img
-                  src="assets/images/logo ProMusic copia.png"
-                  alt="logo"
-                  style={{ width: "300px" }}
-                />
-              </Col>
-            </Row>
-          </div>
-        </Col>
+      <Row id="hero" className="p-0 m-0 h-100 w-100">
+        <HeroSection />
       </Row>
-      <Row>
+      {/* <Row>
         <Col
           className={
-            scrollTop > 10
+            scrollTop === 0
               ? "text-center display-4 fw-bold fade-in py-4"
               : "d-none"
           }
@@ -69,15 +35,15 @@ const Landingpage = () => {
           Malù
           <div className="fs-2 fw-normal">La nostra sala</div>
         </Col>
-      </Row>
-      <Row
+      </Row> */}
+      {/* <Row
         className={
-          scrollTop > 70
+          scrollTop === 0
             ? "text-center fade-in justify-content-center"
             : "d-none"
         }
-      >
-        <Col className="col-3 text-center">
+      > */}
+      {/* <Col className="col-3 text-center">
           <Row>
             <Col className="col-12 fw-bold fs-4 py-2 text-main nav-scale hover">
               Regolamento
@@ -98,8 +64,8 @@ const Landingpage = () => {
               proprio cuore pulsante e musicale per l'isola di Procida
             </Col>
           </Row>
-        </Col>
-        <Col className="col-6 text-center">
+        </Col> */}
+      {/* <Col className="col-6 text-center">
           <Row>
             <Col className="col-12 fw-bold fs-4 py-2 text-main hover">
               Calendario
@@ -112,6 +78,12 @@ const Landingpage = () => {
               />
             </Col>
           </Row>
+        </Col> */}
+      {/* </Row> */}
+
+      <Row className="px-0 mx-0 mt-5 h-100 w-100">
+        <Col className="col-12 px-0 mt-5 ">
+          <SalaProve />
         </Col>
       </Row>
     </>

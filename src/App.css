@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,500;1,6..12,600;1,6..12,700&display=swap");
+@import url("./Components/LandingPage/bg-transition.css");
 :root {
   --primary-dark: #212121;
   --primary-blue: #10425d;
@@ -7,23 +8,23 @@
 }
 body {
   height: 100%;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif !important;
   overflow-x: hidden;
   color: white !important;
 }
 .App {
-  animation: bg-change 9s ease-in infinite alternate-reverse both;
+  background-image: url("../public/assets/images/backgrounds/photo-1532210317995-cc56d90177d9.avif");
 }
-@keyframes bg-change {
-  0% {
-    background-color: #10425dae;
-  }
-  50% {
-    background-color: rgba(255, 63, 63, 0.76);
-  }
-  100% {
-    background-color: #212121c8;
-  }
+.bg-1 {
+  background-image: url("../public/assets/images/backgrounds/photo-1532210317995-cc56d90177d9.avif");
+  background-repeat: repeat;
+  background-size: contain;
+}
+.bg-2 {
+  background-image: url("../public/assets/images/backgrounds/photo-1532210317995-cc56d90177d9.avif");
+  backdrop-filter: blur(10px);
+  background-repeat: repeat;
+  background-size: contain;
 }
 #MainContainer {
   background: transparent;
@@ -38,7 +39,7 @@ body,
   width: 101vw;
 }
 .text-main {
-  color: white !important;
+  color: indianred !important;
   transition: all 0.8s;
 }
 .mini-scale {
@@ -53,6 +54,11 @@ body,
 }
 .text-blue {
   color: var(--primary-blue) !important;
+}
+#heroSection {
+  height: 50vh;
+  margin-top: 15vh !important;
+  margin-bottom: 15vh !important;
 }
 .text-gray {
   color: var(--primary-gray) !important;
@@ -94,19 +100,20 @@ body,
   transition: all 0.9s !important;
 }
 .border-blues {
-  border: 10px solid var(--primary-blue) !important;
+  border: 10px solid var(--primary-blue);
+  backdrop-filter: blur(-1px);
 }
 
 .navbarElementClicked {
-  color: var(--primary-green) !important;
+  color: indianred !important;
   transition: all 0.8s !important;
 }
 .navbarElementHovered {
-  color: var(--primary-gray) !important;
+  color: indianred !important;
   transition: all 0.8s !important;
 }
 .navbarElementHovered:hover {
-  color: var(--primary-green) !important;
+  color: var(--primary-blue) !important;
 }
 .navbarElement {
   color: var(--primary-blue) !important;
