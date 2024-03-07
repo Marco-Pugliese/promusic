@@ -1,0 +1,15 @@
+.navbarElementClicked {
+  color: white !important;
+}
+.navbarElementClicked:hover {
+  color: var(--primary-yellow) !important;
+}
+.navbarElementHovered {
+  color: indianred !important;
+}
+.navbarElementHovered:hover {
+  color: var(--primary-yellow) !important;
+}
+.navbarElement {
+  color: var(--secondary-dark) !important;
+}

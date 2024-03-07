@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import HeroSection from "./HeroSection";
 import SalaProve from "./SalaProve";
+import HeroSectionForMobile from "./HeroSectionForMobile";
 
 const Landingpage = () => {
   const [scrollTop, setScrollTop] = useState(0);
-  const [navHover, setNavHover] = useState(false);
+  // const [navHover, setNavHover] = useState(false);
+  // const [navHover2, setNavHover2] = useState(false);
   // const [navHover2, setNavHover2] = useState(false);
 
   useEffect(() => {
@@ -21,8 +23,13 @@ const Landingpage = () => {
   }, []);
   return (
     <>
-      <Row id="hero" className="p-0 m-0 h-100 w-100">
-        <HeroSection />
+      <Row id="hero" className="p-0 m-0 h-100 w-100 ">
+        {/* <div className="m-0 p-0 d-none d-md-block">
+          <HeroSection />
+        </div> */}
+        {/* <div className="m-0 p-0 d-md-none"> */}
+        <HeroSectionForMobile />
+        {/* </div> */}
       </Row>
       {/* <Row>
         <Col
@@ -81,9 +88,13 @@ const Landingpage = () => {
         </Col> */}
       {/* </Row> */}
 
-      <Row className="px-0 mx-0 mt-5 h-100 w-100">
-        <Col className="col-12 px-0 mt-5 ">
-          <SalaProve />
+      <Row className="px-0 mx-0 h-100 w-100">
+        <Col className="col-12 px-0">
+          <Row className="h-100">
+            <Col className="col-1 offset-2"></Col>
+
+            <SalaProve />
+          </Row>
         </Col>
       </Row>
     </>

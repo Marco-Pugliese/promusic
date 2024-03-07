@@ -1,0 +1,43 @@
+:root {
+  --primary-dark: #212121;
+  --secondary-dark: #161f1e;
+  --primary-blue: #10425d;
+  --secondary-blue: #01a1c0;
+  --primary-green: #6dd280c3;
+  --primary-gray: #d7d7d7;
+  --secondary-gray: #979696;
+  --primary-yellow: #f3b803;
+}
+.bg-music {
+  /* background-image: url("../../public/assets/images/images/photo-1484876065684-b683cf17d276.avif"); */
+  /* background-image: url("../../public/assets/images/images/photo-1485579149621-3123dd979885.avif"); */
+  /* background-image: url("../../public/assets/images/images/photo-1501612780327-45045538702b.avif"); */
+  background-image: url("../../public/assets/images/images/photo-1619983081563-430f63602796.avif");
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  position: relative;
+  background-repeat: repeat;
+}
+.bg-recording {
+  background-image: url("../../public/assets/images/images/photo-1483000805330-4eaf0a0d82da.avif");
+  background-size: cover;
+  height: 39vh;
+}
+.App {
+  background-color: var(--primary-gray);
+}
+.bg-1 {
+  background-color: var(--primary-gray);
+}
+.bg-2 {
+  background-color: var(--secondary-dark);
+  transition: all 1.2s;
+  box-shadow: 0px 10px 25px -5px var(--primary-yellow) !important;
+  z-index: 22;
+}
+
+.bg-blue {
+  background-color: #10425d !important;
+  transition: all 1.2s;
+}

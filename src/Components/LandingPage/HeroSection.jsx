@@ -1,30 +1,32 @@
 import { useState } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 const HeroSection = () => {
   const [heroHover, setHeroHover] = useState(false);
   return (
-    <Row
-      id="heroSection"
-      className={
-        heroHover === true ? "bg-transition p-0 m-0 h-100" : "p-0 m-0 h-100"
-      }
-      onMouseEnter={() => {
-        setHeroHover(true);
-      }}
-      onMouseLeave={() => {
-        setHeroHover(false);
-      }}
-    >
-      <Col className="col-1 col-lg-2 h-100"></Col>
-      <Col className="p-0 m-0 fade-in fst-italic bg-darker col-10 border-blues smaller text-blue">
-        <Row className="p-0 m-0">
-          <Col className="p-0 m-0 col-12 col-lg-10 col-xl-9 col-xxl-8">
-            <div
+    <Container fluid className="m-o p-0">
+      <Row
+        id="heroSection"
+        className={
+          heroHover === true
+            ? "bg-transition p-0 m-0 h-100 mx-auto"
+            : "bg-transitionbck p-0 m-0 h-100 mx-auto"
+        }
+        onMouseEnter={() => {
+          setHeroHover(true);
+        }}
+        onMouseLeave={() => {
+          setHeroHover(false);
+        }}
+      >
+        <Col className="col-1 col-lg-2 h-100"></Col>
+        <Col className="p-0 m-0 fade-in fst-italic bg-darker col-10 smaller text-blue">
+          <Row className="p-0 m-0 border-blues h-100">
+            <Col
               className={
                 heroHover === true
-                  ? "d-flex h-100 align-items-center text-center text-contrast px-5 py-3"
-                  : "d-flex h-100 align-items-center text-center px-5 py-3"
+                  ? "d-flex h-100 align-items-center text-center text-contrast px-5 py-1 p-0 m-0 col-12 col-lg-9 col-xxl-8"
+                  : "d-flex h-100 align-items-center text-center px-5 py-1 p-0 m-0 col-12 col-lg-9 col-xxl-8"
               }
             >
               "La ProMusic è un gruppo di giovani che hanno a cuore la cultura
@@ -47,21 +49,21 @@ const HeroSection = () => {
               grande operosità, specie se sollecitato e sostenuto. Invitare alla
               partecipazione, coinvolgere, accogliere idee è il principio
               fondamentale della ProMusic."
-            </div>
-          </Col>
-          <Col className="p-0 m-0">
-            <div className="h-100 p-0 m-0 d-flex align-items-center text-center bg-blue">
-              <img
-                src="assets/images/logo ProMusic copia.png"
-                alt="logo"
-                style={{ width: "250px" }}
-              />
-            </div>
-          </Col>
-        </Row>
-      </Col>
-      <Col className="col-1 h-100 bg-blue p-0 m-0"></Col>
-    </Row>
+            </Col>
+            <Col className="h-100 bg-blue d-none d-lg-flex col-2 col-lg-3 col-xxl-4">
+              <div className="h-100 p-0 m-0 align-items-center text-center bg-blue">
+                <img
+                  src="assets/images/logo ProMusic copia.png"
+                  alt="logo"
+                  style={{ width: "250px" }}
+                />
+              </div>
+            </Col>
+          </Row>
+        </Col>
+        <Col className="col-1 bg-blue d-none d-lg-block"></Col>
+      </Row>
+    </Container>
   );
 };
 export default HeroSection;

@@ -1,0 +1,21 @@
+.navHover2 {
+  color: var(--primary-gray) !important;
+  transition: all 0.8s;
+}
+.navHover2:hover {
+  cursor: pointer;
+  color: indianred !important;
+}
+.navHover2.miniscale:hover {
+  scale: 1.2;
+}
+.border-topGreen {
+  border-top: 1px solid var(--primary-gray);
+  transition: all 0.8s;
+}
+.border-topGreen:hover {
+  border-color: indianred;
+}
+.hover:hover {
+  cursor: pointer;
+}

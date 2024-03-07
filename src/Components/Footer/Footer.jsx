@@ -11,7 +11,7 @@ const Footer = () => {
   const today = new Date();
   return (
     <div className="pt-5 mt-5">
-      <div className="bg-blue pb-4 mt-2">
+      <div className="bg-2 pb-4 mt-2">
         <Container className="text-center navHover2 mt-5 py-3 smaller">
           <span>
             Associazione Culturale e Musicale ©ProMusic. All rights reserved -{" "}
@@ -37,13 +37,13 @@ const Footer = () => {
                 );
               }}
             >
-              <Facebook className="navHover2 mx-3 " />
+              <Facebook className="navHover2 miniscale mx-3 " />
             </Link>
             <Link to="/phone">
-              <Telephone className="navHover2 mx-3 " />
+              <Telephone className="navHover2 miniscale mx-3 " />
             </Link>
             <Link to="/mail">
-              <Envelope className="navHover2 mx-3 " />
+              <Envelope className="navHover2 miniscale mx-3 " />
             </Link>
           </div>
         </Container>

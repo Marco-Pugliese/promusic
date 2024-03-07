@@ -17,7 +17,7 @@ const Header = () => {
       }}
       className={navHover === true ? "bg-2" : "bg-1"}
     >
-      <Container fluid className="py-2">
+      <Container fluid className="py-4">
         <Navbar.Brand
           onClick={() => {
             setSelected("Home");
@@ -31,7 +31,7 @@ const Header = () => {
           <img
             src="/assets/images/logo ProMusic copia.png"
             alt="logo"
-            style={{ width: "50px" }}
+            style={{ width: "66px" }}
           />
           <div className="text-center fs-6 fw-bold">
             ProMusic{" "}
@@ -56,7 +56,7 @@ const Header = () => {
               <img
                 src="/assets/images/logo ProMusic copia.png"
                 alt="logo"
-                style={{ width: "50px" }}
+                style={{ width: "66px" }}
               />{" "}
             </Link>
             <Link
@@ -74,7 +74,7 @@ const Header = () => {
               <span
                 className={
                   selected === "Home" && navHover === false
-                    ? "text-main fw-bold"
+                    ? "text-contrast fw-bold"
                     : selected === "Home" && navHover === true
                     ? "navbarElementClicked fw-bold"
                     : ""
@@ -97,7 +97,7 @@ const Header = () => {
               <span
                 className={
                   selected === "Info" && navHover === false
-                    ? "text-main fw-bold"
+                    ? "text-contrast fw-bold"
                     : selected === "Info" && navHover === true
                     ? "navbarElementClicked fw-bold"
                     : ""
@@ -121,7 +121,7 @@ const Header = () => {
               <span
                 className={
                   selected === "Socio" && navHover === false
-                    ? "text-main fw-bold"
+                    ? "text-contrast fw-bold"
                     : selected === "Socio" && navHover === true
                     ? "navbarElementClicked fw-bold"
                     : ""
@@ -144,7 +144,7 @@ const Header = () => {
               <span
                 className={
                   selected === "Corsi" && navHover === false
-                    ? "text-main fw-bold"
+                    ? "text-contrast fw-bold"
                     : selected === "Corsi" && navHover === true
                     ? "navbarElementClicked fw-bold"
                     : ""
@@ -167,7 +167,7 @@ const Header = () => {
               <span
                 className={
                   selected === "Eventi" && navHover === false
-                    ? "text-main fw-bold"
+                    ? "text-contrast fw-bold"
                     : selected === "Eventi" && navHover === true
                     ? "navbarElementClicked fw-bold"
                     : ""
@@ -190,7 +190,7 @@ const Header = () => {
               <span
                 className={
                   selected === "Prenota" && navHover === false
-                    ? "text-main fw-bold"
+                    ? "text-contrast fw-bold"
                     : selected === "Prenota" && navHover === true
                     ? "navbarElementClicked fw-bold"
                     : ""
