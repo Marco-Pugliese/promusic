@@ -6,7 +6,7 @@ const JoinUs = () => {
   const [isShown, setIsShown] = useState(false);
 
   return (
-    <div id="joinUs">
+    <div id="joinUs" className="mt-2">
       <div className="w-100 d-flex justify-content-center ">
         <ArrowDownCircleFill
           className={
@@ -23,8 +23,8 @@ const JoinUs = () => {
       <div
         className={
           isShown === true
-            ? "mt-1 px-5 py-2 text-center normal"
-            : "mt-1 px-5 py-2 text-center minimize"
+            ? "mt-1 px-5 py-1 text-center normal"
+            : "mt-1 px-5 py-1 text-center minimize"
         }
       >
         <span className="redInHover">
