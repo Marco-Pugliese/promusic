@@ -24,6 +24,11 @@ const Landingpage = () => {
         <HeroSection />
       </Row>
       <Row>
+        <Col className="col-12 text-dark text-center border-bottom border-black pb-2 fs-2 ">
+          <span className="border-top border-black pt-2 px-5 text-shadow">
+            SOMETHING
+          </span>
+        </Col>
         <Col className="col-12 px-0">
           <Aside />
         </Col>

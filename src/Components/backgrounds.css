@@ -53,3 +53,49 @@
   height: 25vh;
   background-color: whitesmoke;
 }
+#aside {
+  background: whitesmoke;
+}
+.img-corsi {
+  background-image: url("../../public/assets/images/images/duechitarre.jpeg");
+  height: 66vh;
+  background-position: right;
+  background-size: cover;
+}
+.img-livemusic {
+  background-image: url("../../public/assets/images/backgrounds/livemusic.avif");
+  height: 66vh;
+  background-position: center;
+  background-size: cover;
+}
+.img-recording {
+  background-image: url("../../public/assets/images/images/nastro.webp");
+  height: 66vh;
+  background-position: center;
+  background-size: cover;
+}
+.img-piano {
+  background-image: url("../../public/assets/images/images/oldpiano\ copia.jpeg");
+  height: 66vh;
+  background-position: center;
+  background-size: cover;
+}
+.filter-black {
+  background-color: #212121cf;
+  padding: 0 75px;
+  transition: all 0.6s;
+  color: white;
+  font-weight: bold;
+  animation: removetransparency 0.6s linear both;
+}
+@keyframes removetransparency {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.filter-black:hover {
+  background-color: #212121ee;
+}

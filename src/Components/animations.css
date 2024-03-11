@@ -1,121 +1,20 @@
-.scale-in-center {
-  animation: scale-in-center 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) both;
+.slideup {
+  animation: slideup 3s linear both;
 }
-@keyframes scale-in-center {
+@keyframes slideup {
   0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  10% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.fade-in {
-  animation: fade-in 2.7s both;
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
+    height: 0vh;
+    color: var(--secondary-dark);
   }
 
   100% {
-    opacity: 1;
+    height: 10vh;
+    color: whitesmoke;
   }
 }
-.slide-up {
-  animation: slide-up 4.7s both;
+.close {
+  animation: slideup 3s linear reverse both;
 }
-@keyframes slide-up {
-  0% {
-    position: relative;
-    top: -18vh;
-    left: 0px;
-    opacity: 0;
-  }
-  10% {
-    opacity: 0;
-  }
-  100% {
-    position: relative;
-    top: -2vh;
-    left: 0px;
-    scale: 1.1;
-    opacity: 1;
-  }
-}
-.slide-down {
-  animation: slide-down 4.7s both;
-}
-@keyframes slide-down {
-  0% {
-    position: relative;
-    top: -2vh;
-    left: 0px;
-    opacity: 1;
-    scale: 1.1;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    position: relative;
-    top: 18vh;
-    left: 0px;
-    scale: 0.9;
-    opacity: 0;
-  }
-}
-.slide-in {
-  animation: slide-in 4.7s both;
-}
-@keyframes slide-in {
-  0% {
-    position: relative;
-    top: -2vh;
-    left: -12vw;
-    opacity: 0;
-    scale: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    position: relative;
-    top: -2vh;
-    left: 0;
-    scale: 1.2;
-    opacity: 1;
-  }
-}
-.slide-out {
-  animation: slide-out 4.7s both;
-}
-@keyframes slide-out {
-  0% {
-    position: relative;
-    top: -2vh;
-    left: 0px;
-    opacity: 1;
-    scale: 1.2;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    position: relative;
-    top: -2vh;
-    left: -12vw;
-    scale: 0.9;
-    opacity: 0;
-  }
-}
-
 .pulsate-fwd {
   animation: pulsate-fwd 0.5s ease-in-out infinite both;
 }

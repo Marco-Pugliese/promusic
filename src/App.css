@@ -6,6 +6,7 @@
 @import url("./Components/Footer/footer.css");
 @import url("./Components/LandingPage/landingPage.css");
 @import url("./Components/InfoPage/info.css");
+@import url("./Components/LandingPage/Aside/aside.css");
 :root {
   --primary-dark: #212121;
   --secondary-dark: #161f1e;

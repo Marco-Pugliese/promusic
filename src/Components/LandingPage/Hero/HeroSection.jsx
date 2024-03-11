@@ -23,7 +23,6 @@ const HeroSection = () => {
             "MUSIC IS THE ONLY REASON"
           </div>
         </Col>
-
         <Col className="col-12 bg-proMusic2"></Col>
       </Row>
     </Container>

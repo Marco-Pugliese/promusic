@@ -1,17 +1,23 @@
-import { Col, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import CorsiEMaster from "./CorsiEMaster";
+import SalaProve from "./SalaProve";
+import Recording from "./Recording";
+import LiveMusic from "./LiveMusic";
+import JoinUs from "./JoinUs";
 
 const Aside = () => {
   return (
-    <>
-      <Row className="bg-1 pt-5 d-flex flex-row justify-content-center ">
-        <Col className="px-0 mx-0 h-100 col-5 col-lg-4 col-xxl-4 h-100 d-flex flex-column  align-items-start justify-content-between">
-          <div className="w-100"></div>
-        </Col>
-      </Row>
-      <Row className="bg-1 py-3 d-flex flex-row justify-content-center ">
-        <Col className="col-1"></Col>
-      </Row>
-    </>
+    <div className="w-100" id="aside">
+      <Container className="text-dark p-0 m-0 text-center mx-auto">
+        <CorsiEMaster />
+        <LiveMusic />
+        <Recording />
+        <SalaProve />
+      </Container>
+      <Container>
+        <JoinUs />
+      </Container>
+    </div>
   );
 };
 export default Aside;
