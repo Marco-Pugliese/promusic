@@ -1,65 +1,48 @@
 import { useState } from "react";
-import { ArrowDownCircleFill, ArrowUpCircleFill } from "react-bootstrap-icons";
+import { ArrowDownCircleFill } from "react-bootstrap-icons";
+import { Link } from "react-router-dom";
 
 const JoinUs = () => {
   const [isShown, setIsShown] = useState(false);
+
   return (
     <div id="joinUs">
-      <div className="w-100 d-flex justify-content-center mt-3">
-        <div
-          className={
-            isShown === false
-              ? "h-100 d-flex align-items-center mt-2 justify-content-center"
-              : " h-100 d-flex align-items-center mt-2 justify-content-center d-none"
-          }
-        >
-          <ArrowUpCircleFill
-            className="fs-4 pointer"
-            onClick={() => {
-              setIsShown(true);
-            }}
-          />
-          <span className="mx-2">JOIN US !</span>
-          <ArrowUpCircleFill
-            className="fs-4 pointer"
-            onClick={() => {
-              setIsShown(true);
-            }}
-          />
-        </div>
-        <div
+      <div className="w-100 d-flex justify-content-center ">
+        <ArrowDownCircleFill
           className={
             isShown === true
-              ? " h-100 d-flex align-items-center mt-2 justify-content-center"
-              : " h-100 d-flex align-items-center mt-2 justify-content-center d-none"
+              ? "fs-4 arrowInHover mt-3 rotate0"
+              : "fs-4 arrowInHover mt-3 rotate"
           }
-        >
-          <ArrowDownCircleFill
-            className="fs-4 pointer"
-            onClick={() => {
-              setIsShown(false);
-            }}
-          />
-          <span className="mx-2">JOIN US !</span>
-          <ArrowDownCircleFill
-            className="fs-4 pointer"
-            onClick={() => {
-              setIsShown(false);
-            }}
-          />
-        </div>
+          onClick={() => {
+            setIsShown(!isShown);
+          }}
+        />
       </div>
 
       <div
         className={
-          isShown === true ? "mt-1 px-5 py-2 slideup" : "mt-1 px-5 py-2 close"
+          isShown === true
+            ? "mt-1 px-5 py-2 text-center normal"
+            : "mt-1 px-5 py-2 text-center minimize"
         }
       >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui labore
-        pariatur praesentium soluta eaque illo cupiditate excepturi dolore?
-        Commodi obcaecati quis necessitatibus minima! Porro, sunt! Animi natus
-        ipsam aspernatur provident. JOIN US
-        <button>JOIN US</button>
+        <span className="redInHover">
+          DIVENTA NOSTRO SOCIO CON POCHI CLICK!
+        </span>
+        <div className="w-100 text-center ">
+          <Link to={"/join"} className="nav-link ">
+            <span
+              className={
+                isShown === true
+                  ? " rounded-3 text-dark px-2 py-1 mt-2 d-inline-block myBtn2 myBtn3"
+                  : " rounded-3 text-dark"
+              }
+            >
+              JOIN US
+            </span>
+          </Link>
+        </div>
       </div>
     </div>
   );
