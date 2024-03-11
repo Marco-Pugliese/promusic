@@ -3060,3 +3060,46 @@
     background-color: transparent;
   }
 }
+
+.bg-changingBase {
+  background: linear-gradient(
+    to right,
+    transparent -50%,
+    var(--primary-gray) 50%,
+    var(--primary-gray) 81%,
+    transparent 90%
+  );
+}
+.bg-changingBase2 {
+  background: linear-gradient(
+    to bottom right,
+    transparent -20%,
+    var(--primary-gray) 60%,
+
+    transparent 90%
+  );
+}
+.bg-changingBase3 {
+  background: linear-gradient(
+    to top right,
+    transparent -20%,
+    var(--primary-gray) 60%,
+
+    transparent 90%
+  );
+}
+.color-change-3x {
+  animation: color-change-3x 4s linear infinite alternate both;
+}
+
+@keyframes color-change-3x {
+  0% {
+    background: lightcoral;
+  }
+  50% {
+    background: var(--primary-yellow);
+  }
+  100% {
+    background: #be006d;
+  }
+}

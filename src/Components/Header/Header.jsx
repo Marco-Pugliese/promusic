@@ -8,35 +8,30 @@ const Header = () => {
   return (
     <Navbar
       expand="lg"
-      id="navbar"
       onMouseEnter={() => {
         setNavHover(true);
       }}
       onMouseLeave={() => {
         setNavHover(false);
       }}
-      className={navHover === true ? "bg-2" : "bg-1"}
+      className="position-relative p-0 m-0"
     >
-      <Container fluid className="py-4">
+      <Container id="navbar" fluid>
         <Navbar.Brand
           onClick={() => {
             setSelected("Home");
           }}
-          className={
-            navHover === true
-              ? "hover d-flex align-items-center d-lg-none fade-in navbarElementHovered"
-              : "hover d-flex align-items-center d-lg-none fade-in navbarElement"
-          }
+          className="ms-3 hover d-flex align-items-center fade-in"
         >
           <img
             src="/assets/images/logo ProMusic copia.png"
             alt="logo"
-            style={{ width: "66px" }}
+            style={{ width: "40px" }}
           />
-          <div className="text-center fs-6 fw-bold">
-            ProMusic{" "}
-            <span className="extrasmall">
-              - Associazione Culturale e Musicale
+          <div className="text-center fs-5 text-dark ms-2">
+            ProMusic
+            <span className="extrasmall fw-light">
+              | Associazione Culturale e Musicale
             </span>
           </div>
         </Navbar.Brand>
@@ -45,42 +40,24 @@ const Header = () => {
           className="text-light"
         />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mx-auto nav-scale d-flex align-items-center navbarElement">
+          <Nav className="ms-auto me-3 nav-scale d-flex align-items-center">
             <Link
               onClick={() => {
                 setSelected("Home");
               }}
               to="/"
-              className="nav-link fw-bold d-none d-lg-block ps-4 me-5 navbarElement"
+              className="nav-link "
             >
-              <img
-                src="/assets/images/logo ProMusic copia.png"
-                alt="logo"
-                style={{ width: "66px" }}
-              />{" "}
-            </Link>
-            <Link
-              onClick={() => {
-                setSelected("Home");
-              }}
-              to="/"
-              className={
-                navHover === true
-                  ? "nav-link d-lg-none d-block fw-bold ps-4 navbarElement"
-                  : "nav-link d-lg-none d-block fw-bold ps-4 navbarElement"
-              }
-            >
-              {" "}
               <span
                 className={
-                  selected === "Home" && navHover === false
-                    ? "text-contrast fw-bold"
-                    : selected === "Home" && navHover === true
-                    ? "navbarElementClicked fw-bold"
-                    : ""
+                  navHover === true && selected === "Home"
+                    ? "underlined text-red transition"
+                    : navHover === false && selected === "Home"
+                    ? "underlined text-red transition"
+                    : "transition"
                 }
               >
-                Home
+                HOME
               </span>
             </Link>
             <Link
@@ -88,115 +65,56 @@ const Header = () => {
                 setSelected("Info");
               }}
               to="/info"
-              className={
-                navHover === true
-                  ? "nav-link fw-bold ps-4 navbarElementHovered"
-                  : "nav-link fw-bold ps-4 navbarElement"
-              }
+              className="nav-link "
             >
               <span
                 className={
-                  selected === "Info" && navHover === false
-                    ? "text-contrast fw-bold"
-                    : selected === "Info" && navHover === true
-                    ? "navbarElementClicked fw-bold"
-                    : ""
+                  navHover === true && selected === "Info"
+                    ? "underlined text-red transition"
+                    : navHover === false && selected === "Info"
+                    ? "underlined text-red transition"
+                    : "transition"
                 }
               >
-                Contatti & Info
+                INFO
               </span>
             </Link>
             <Link
               onClick={() => {
-                setSelected("Socio");
+                setSelected("JoinUs");
               }}
               to="/join"
-              className={
-                navHover === true
-                  ? "nav-link fw-bold ps-4 navbarElementHovered"
-                  : "nav-link fw-bold ps-4 navbarElement"
-              }
+              className="nav-link "
             >
-              {" "}
               <span
                 className={
-                  selected === "Socio" && navHover === false
-                    ? "text-contrast fw-bold"
-                    : selected === "Socio" && navHover === true
-                    ? "navbarElementClicked fw-bold"
-                    : ""
+                  navHover === true && selected === "JoinUs"
+                    ? "underlined text-red transition"
+                    : navHover === false && selected === "JoinUs"
+                    ? "underlined text-red transition"
+                    : "transition"
                 }
               >
-                Diventa Socio
+                JOIN US
               </span>
             </Link>
             <Link
               onClick={() => {
-                setSelected("Corsi");
+                setSelected("Services");
               }}
-              to="/corsi"
-              className={
-                navHover === true
-                  ? "nav-link fw-bold ps-4 navbarElementHovered"
-                  : "nav-link fw-bold ps-4 navbarElement"
-              }
+              to="/services"
+              className="nav-link "
             >
               <span
                 className={
-                  selected === "Corsi" && navHover === false
-                    ? "text-contrast fw-bold"
-                    : selected === "Corsi" && navHover === true
-                    ? "navbarElementClicked fw-bold"
-                    : ""
+                  navHover === true && selected === "Services"
+                    ? "underlined text-red transition"
+                    : navHover === false && selected === "Services"
+                    ? "underlined text-red transition"
+                    : "transition"
                 }
               >
-                I nostri Corsi
-              </span>
-            </Link>
-            <Link
-              onClick={() => {
-                setSelected("Eventi");
-              }}
-              to="/eventi"
-              className={
-                navHover === true
-                  ? "nav-link fw-bold ps-4 navbarElementHovered"
-                  : "nav-link fw-bold ps-4 navbarElement"
-              }
-            >
-              <span
-                className={
-                  selected === "Eventi" && navHover === false
-                    ? "text-contrast fw-bold"
-                    : selected === "Eventi" && navHover === true
-                    ? "navbarElementClicked fw-bold"
-                    : ""
-                }
-              >
-                I nostri Eventi
-              </span>
-            </Link>
-            <Link
-              onClick={() => {
-                setSelected("Prenota");
-              }}
-              to="/book"
-              className={
-                navHover === true
-                  ? "nav-link fw-bold ps-4 navbarElementHovered"
-                  : "nav-link fw-bold ps-4 navbarElement"
-              }
-            >
-              <span
-                className={
-                  selected === "Prenota" && navHover === false
-                    ? "text-contrast fw-bold"
-                    : selected === "Prenota" && navHover === true
-                    ? "navbarElementClicked fw-bold"
-                    : ""
-                }
-              >
-                Prenota la Sala!
+                SERVICES
               </span>
             </Link>
           </Nav>

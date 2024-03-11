@@ -10,15 +10,15 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const today = new Date();
   return (
-    <div className="pt-5 mt-5">
-      <div className="bg-2 pb-4 mt-2">
-        <Container className="text-center navHover2 mt-5 py-3 smaller">
+    <div id="footer" className="pt-5">
+      <div className="pt-5">
+        <Container className="text-center navHover2 py-3 smaller">
           <span>
             Associazione Culturale e Musicale ©ProMusic. All rights reserved -{" "}
             <span className="small">{today.getFullYear()}</span>
           </span>
         </Container>
-        <Container className="d-flex border-topGreen pt-2 ">
+        <Container className="d-flex border-topGreen  ">
           <div className=" fs-4 text-center w-100 extrasmall">
             <Link
               onClick={() => {

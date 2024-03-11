@@ -1,0 +1,18 @@
+@media screen and (max-width: 1150px) {
+  #heroFrase {
+    letter-spacing: 1.5em;
+  }
+}
+@media screen and (max-width: 900px) {
+  #heroFrase {
+    letter-spacing: 1em;
+  }
+}
+#heroFrase {
+  background-color: rgba(0, 0, 0, 0.75);
+  letter-spacing: 2em;
+  color: var(--primary-gray);
+  font-weight: bold;
+  transition: 0.8s;
+  text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.533);
+}

@@ -4,6 +4,8 @@
 @import url("./Components/animations.css");
 @import url("./Components/Header/header.css");
 @import url("./Components/Footer/footer.css");
+@import url("./Components/LandingPage/landingPage.css");
+@import url("./Components/InfoPage/info.css");
 :root {
   --primary-dark: #212121;
   --secondary-dark: #161f1e;
@@ -24,6 +26,12 @@ body {
 #MainContainer {
   background: transparent;
 }
+.underlined {
+  text-decoration: underline !important;
+}
+.transition {
+  transition: all 0.6s !important;
+}
 html,
 body,
 #root {
@@ -31,9 +39,11 @@ body,
   overflow-x: hidden;
 }
 /* TEXT PROPERTIES */
-.text-contrast {
-  transition: all 6s;
+.text-red {
   color: indianred !important;
+}
+.text-yellow {
+  color: var(--primary-yellow) !important;
 }
 .text-main {
   color: white;
@@ -63,7 +73,7 @@ body,
 /* BUTTONS AND INPUTS */
 .btn-main {
   background-color: var(--primary-gray) !important;
-  border: 1.5px solid var(--primary-blue) !important;
+  border: 1.5px solid black !important;
   box-shadow: 0 0 25px 2px var(--primary-blue);
   color: var(--primary-blue) !important;
   transition: all 0.8s !important;
@@ -73,26 +83,59 @@ body,
   color: var(--primary-blue) !important;
   box-shadow: 1.5px solid var(--primary-green);
 }
-.navbar-toggler {
-  border-color: white !important;
-  background-color: white !important;
+.myBtn1,
+.myBtn2 {
+  border: 2.5px solid var(--primary-dark) !important;
+  background-color: whitesmoke;
+  transition: 0.8s;
+  height: 100%;
 }
-#navbar {
-  transition: all 0.8s ease-in-out;
+.myBtn1:hover,
+.myBtn2:hover {
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
+  font-size: 1.1em;
 }
-
-#navbar:hover {
-  cursor: pointer;
+.myBtn2:hover {
+  background-color: var(--primary-yellow);
+}
+.myBtn1:hover {
+  background-color: var(--primary-green);
+}
+.useslessPadding {
+  height: 5vh;
 }
 #hero {
-  height: 100vh !important;
+  height: 130vh !important;
 }
 #heroSection {
   position: relative;
 }
+.textscale {
+  scale: 1.2em;
+  transition: all 3s;
+}
+.subHero {
+  height: 70vh;
+}
+.font-changing {
+  font-size: 1.15em;
+}
+@media screen and (max-width: 800px) {
+  .font-changing {
+    font-size: 1em !important;
+  }
+}
+@media screen and (max-width: 550px) {
+  .font-changing {
+    font-size: 0.9em !important;
+  }
+}
 
 .border-gray {
   border-color: var(--primary-gray) !important;
+}
+.text-shadow {
+  text-shadow: 5px 2px 8px #161f1ecb;
 }
 @media only screen and (min-width: 749px) {
   .fs-lg-2 {
@@ -100,7 +143,10 @@ body,
     transition: all 0.8s;
   }
 }
-
+#footer {
+  height: 25vh;
+  background: var(--secondary-dark);
+}
 .border-blues {
   border: 10px solid var(--primary-blue);
   backdrop-filter: blur(-1px);
@@ -125,11 +171,14 @@ body,
 .input-group-text,
 input,
 textarea {
-  border: 1px solid var(--primary-blue) !important;
-  color: var(--primary-dark) !important;
+  border: 1px solid whitesmoke !important;
+  color: whitesmoke !important;
+  box-shadow: 0px 0px 20px 2px rgba(245, 245, 245, 0.142) !important;
 }
-input:focus {
-  background-color: transparent !important;
+input:focus,
+textarea:focus {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  transition: all 0.8s;
   outline: none !important;
   box-shadow: none !important;
 }
@@ -155,4 +204,23 @@ input:focus {
 .herotext {
   letter-spacing: 0.8em !important;
   text-shadow: 5px 2px 8px #161f1e;
+  transition: 3s;
+}
+.herotextHovered {
+  letter-spacing: 0.85em !important;
+
+  scale: 1.05;
+  transition: 3s;
+}
+.transparent {
+  opacity: 0 !important;
+}
+.transition3s {
+  transition: all 3s ease-in-out !important ;
+}
+.shadowOnHover {
+  box-shadow: 0px 0px 20px 3px #161f1ea8;
+}
+.w-10 {
+  width: 10%;
 }

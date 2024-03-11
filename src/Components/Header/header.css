@@ -1,15 +1,16 @@
-.navbarElementClicked {
-  color: white !important;
+@media screen and (min-width: 992px) {
+  #navbar {
+    height: 10vh;
+  }
 }
-.navbarElementClicked:hover {
-  color: var(--primary-yellow) !important;
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: whitesmoke;
+  min-height: 10vh;
 }
-.navbarElementHovered {
-  color: indianred !important;
-}
-.navbarElementHovered:hover {
-  color: var(--primary-yellow) !important;
-}
-.navbarElement {
-  color: var(--secondary-dark) !important;
+.main {
+  margin-top: 10vh;
 }

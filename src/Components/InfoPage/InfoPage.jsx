@@ -1,10 +1,18 @@
 import { Col, Container, InputGroup, Row } from "react-bootstrap";
-import { Envelope, PinMapFill, TelephoneFill } from "react-bootstrap-icons";
+import {
+  ArrowDownCircleFill,
+  Envelope,
+  PinMapFill,
+  TelephoneFill,
+} from "react-bootstrap-icons";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 
 const InfoPage = () => {
   const form = useRef();
+  const [envelopeHovered, setEnvelopeHovered] = useState(false);
+  const [pinMapHovered, setPinMapHovered] = useState(false);
+  const [PhoneHovered, setPhoneHovered] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -17,7 +25,6 @@ const InfoPage = () => {
       ? setIsEverythingChecked(true)
       : setIsEverythingChecked(false);
   };
-  // const nothing = () => {};
 
   const sendEmail = () => {
     emailjs
@@ -37,34 +44,100 @@ const InfoPage = () => {
   };
 
   return (
-    <Container onClick={() => {}} className="mt-5 pt-5" id="contactme">
-      <Row className="py-5 my-5">
-        <Col className="col-6 fs-1 fw-bold">RESTIAMO IN CONTATTO!</Col>
-        <Col>
-          <div className="d-flex align-items-center my-2">
-            <Envelope className="me-2 fs-4" /> :
-            <a
-              className="nav-link mx-2"
-              href="mailto:promusicisoladiprocida@esempio.com"
-            >
-              promusicisoladiprocida@esempio.com
-            </a>
-          </div>
-          <div className="d-flex align-items-center my-2">
-            <PinMapFill className="me-2 fs-4" /> :
-            <a
-              className="nav-link mx-2"
-              href="https://maps.app.goo.gl/uBaKwPZRb54vLnxc6"
-            >
-              Via Marcello Scotti, 15 - Procida(Na) - 80079
-            </a>
-          </div>
-          <div className="d-flex align-items-center my-2">
-            <TelephoneFill className="me-2 fs-4" /> :
-            <a className="nav-link mx-2" href="call:+390123456789">
-              +39 0123456789
-            </a>
-          </div>
+    <Container fluid onClick={() => {}} className="text-light p-0 m-0">
+      <Row id="contactme">
+        <Col className="col-12 bg-infoPage">
+          <Row className="h-100 align-items-center justify-content-center">
+            <Col className="col-6 text-center d-flex flex-column align-items-center justify-content-center fs-1 fw-bold text-light">
+              I NOSTRI CONTATTI!
+            </Col>
+            <Col className="d-flex flex-column align-items-center justify-content-center">
+              <div
+                onMouseEnter={() => {
+                  setEnvelopeHovered(true);
+                }}
+                onMouseLeave={() => {
+                  setEnvelopeHovered(false);
+                }}
+                className="d-flex flex-row"
+              >
+                <Envelope
+                  className={
+                    envelopeHovered === true
+                      ? "me-2 fs-4 text-red transition"
+                      : "me-2 fs-4 text-light transition"
+                  }
+                />{" "}
+                :
+                <a
+                  className={
+                    envelopeHovered === true
+                      ? "nav-link mx-2 text-red transition"
+                      : "nav-link mx-2 text-light transition"
+                  }
+                  href="mailto:promusicisoladiprocida@esempio.com"
+                >
+                  promusicisoladiprocida@esempio.com
+                </a>
+              </div>
+              <div
+                onMouseEnter={() => {
+                  setPinMapHovered(true);
+                }}
+                onMouseLeave={() => {
+                  setPinMapHovered(false);
+                }}
+                className="d-flex flex-row"
+              >
+                <PinMapFill
+                  className={
+                    pinMapHovered === true
+                      ? "me-2 fs-4 text-red transition"
+                      : "me-2 fs-4 text-light transition"
+                  }
+                />
+                :
+                <a
+                  className={
+                    pinMapHovered === true
+                      ? "nav-link mx-2 text-red transition"
+                      : "nav-link mx-2 text-light transition"
+                  }
+                  href="https://maps.app.goo.gl/uBaKwPZRb54vLnxc6"
+                >
+                  Via Marcello Scotti, 15 - Procida(Na) - 80079
+                </a>
+              </div>
+              <div
+                onMouseEnter={() => {
+                  setPhoneHovered(true);
+                }}
+                onMouseLeave={() => {
+                  setPhoneHovered(false);
+                }}
+                className="d-flex flex-row"
+              >
+                <TelephoneFill
+                  className={
+                    PhoneHovered === true
+                      ? "me-2 fs-4 text-red transition"
+                      : "me-2 fs-4 text-light transition"
+                  }
+                />{" "}
+                :
+                <a
+                  className={
+                    PhoneHovered === true
+                      ? "nav-link mx-2 text-red transition"
+                      : "nav-link mx-2 text-light transition"
+                  }
+                  href="call:+390123456789"
+                >
+                  +39 0123456789
+                </a>
+              </div>
+            </Col>
+          </Row>
         </Col>
       </Row>
 
@@ -73,10 +146,23 @@ const InfoPage = () => {
         onSubmit={(e) => {
           e.preventDefault();
         }}
+        id="form"
+        className="bg-form d-flex flex-column justify-content-between align-items-center"
       >
-        <Container className="mt-5 pt-5">
-          <Row className="pt-5 mt-5">
-            <Col className="col-12 col-lg-6 mt-5">
+        <Container
+          fluid
+          id="scrivici"
+          className="d-flex bg-blue align-items-center justify-content-center"
+        >
+          <div className="text-red fs-1 ">
+            <ArrowDownCircleFill className="pulsate-fwd mx-4" />
+            INVIACI UNA MAIL{" "}
+            <ArrowDownCircleFill className="pulsate-fwd mx-4" />
+          </div>
+        </Container>
+        <Container>
+          <Row>
+            <Col className="col-12 col-lg-6 ">
               <InputGroup className="mt-4">
                 <InputGroup.Text
                   className="bg-transparent text-gray"
@@ -222,10 +308,8 @@ const InfoPage = () => {
             </Col>
           </Row>
         </Container>
+        <Container className="useslessPadding"></Container>
       </form>
-      {/* <Container id="icons-wrap" className="mt-4">
-        <Icons />
-      </Container> */}
     </Container>
   );
 };

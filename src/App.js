@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <div id="MainContainer">
         <Header />
-        <div className="flex-grow-1">
+        <div className="main flex-grow-1">
           <Routes>
             <Route path="/registration" element={<ModuloIscrizione />} />
             <Route path="/" element={<Landingpage />} />

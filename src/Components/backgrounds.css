@@ -8,36 +8,48 @@
   --secondary-gray: #979696;
   --primary-yellow: #f3b803;
 }
-.bg-music {
-  /* background-image: url("../../public/assets/images/images/photo-1484876065684-b683cf17d276.avif"); */
-  /* background-image: url("../../public/assets/images/images/photo-1485579149621-3123dd979885.avif"); */
-  /* background-image: url("../../public/assets/images/images/photo-1501612780327-45045538702b.avif"); */
-  background-image: url("../../public/assets/images/images/photo-1619983081563-430f63602796.avif");
-  background-size: cover;
+.bg-proMusic {
+  background-image: url("../../public/assets/images/images/vinilenero\ copia\ 2.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
-  height: 60vh;
-  position: relative;
-  background-repeat: repeat;
-}
-.bg-recording {
-  background-image: url("../../public/assets/images/images/photo-1483000805330-4eaf0a0d82da.avif");
-  background-size: cover;
   height: 39vh;
 }
-.App {
-  background-color: var(--primary-gray);
+
+.bg-proMusic2 {
+  background-image: url("../../public/assets/images/images/vinilenero\ copia\ 3.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 39vh;
 }
-.bg-1 {
-  background-color: var(--primary-gray);
-}
-.bg-2 {
-  background-color: var(--secondary-dark);
-  transition: all 1.2s;
-  box-shadow: 0px 10px 25px -5px var(--primary-yellow) !important;
-  z-index: 22;
+.bg-proMiddle {
+  /* background-image: url("../../public/assets/images/images/duechitarre.jpeg"); */
+  background-color: #161f1e;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 12vh;
 }
 
-.bg-blue {
-  background-color: #10425d !important;
-  transition: all 1.2s;
+#contactme {
+  height: 65vh;
+  background-image: url("../../public/assets/images/images/nastro.webp");
+  background-size: 100vh;
+  background-repeat: repeat-x;
+  background-position: center;
+  z-index: 2;
+}
+.bg-infoPage {
+  background-color: rgba(0, 0, 0, 0.635);
+}
+.bg-form {
+  background: indianred;
+}
+#form {
+  height: 80vh;
+}
+#scrivici {
+  height: 25vh;
+  background-color: whitesmoke;
 }
