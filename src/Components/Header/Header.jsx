@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { switchSectionAction } from "../../redux/Actions";
+import { useDispatch, useSelector } from "react-redux";
 
 const Header = () => {
   const [navHover, setNavHover] = useState(false);
-  const [selected, setSelected] = useState("Home");
+  const dispatch = useDispatch();
+  const selectedPage = useSelector((state) => state.Page.pageSelected[0]);
   return (
     <Navbar
       expand="lg"
@@ -19,7 +22,7 @@ const Header = () => {
       <Container id="navbar" fluid>
         <Navbar.Brand
           onClick={() => {
-            setSelected("Home");
+            switchSectionAction("Home");
           }}
           className="mx-1 hover d-flex align-items-center fade-in"
         >
@@ -46,16 +49,16 @@ const Header = () => {
           <Nav className="ms-auto me-3 nav-scale d-flex align-items-center">
             <Link
               onClick={() => {
-                setSelected("Home");
+                dispatch(switchSectionAction("Home"));
               }}
               to="/"
               className="nav-link "
             >
               <span
                 className={
-                  navHover === true && selected === "Home"
+                  navHover === true && selectedPage === "Home"
                     ? "underlined text-red transition"
-                    : navHover === false && selected === "Home"
+                    : navHover === false && selectedPage === "Home"
                     ? "underlined text-red transition"
                     : "transition"
                 }
@@ -65,16 +68,16 @@ const Header = () => {
             </Link>
             <Link
               onClick={() => {
-                setSelected("Info");
+                dispatch(switchSectionAction("Info"));
               }}
               to="/info"
               className="nav-link "
             >
               <span
                 className={
-                  navHover === true && selected === "Info"
+                  navHover === true && selectedPage === "Info"
                     ? "underlined text-red transition"
-                    : navHover === false && selected === "Info"
+                    : navHover === false && selectedPage === "Info"
                     ? "underlined text-red transition"
                     : "transition"
                 }
@@ -84,16 +87,16 @@ const Header = () => {
             </Link>
             <Link
               onClick={() => {
-                setSelected("JoinUs");
+                dispatch(switchSectionAction("JoinUs"));
               }}
               to="/join"
               className="nav-link "
             >
               <span
                 className={
-                  navHover === true && selected === "JoinUs"
+                  navHover === true && selectedPage === "JoinUs"
                     ? "underlined text-red transition"
-                    : navHover === false && selected === "JoinUs"
+                    : navHover === false && selectedPage === "JoinUs"
                     ? "underlined text-red transition"
                     : "transition"
                 }
@@ -103,16 +106,16 @@ const Header = () => {
             </Link>
             <Link
               onClick={() => {
-                setSelected("Services");
+                dispatch(switchSectionAction("Services"));
               }}
               to="/services"
               className="nav-link "
             >
               <span
                 className={
-                  navHover === true && selected === "Services"
+                  navHover === true && selectedPage === "Services"
                     ? "underlined text-red transition"
-                    : navHover === false && selected === "Services"
+                    : navHover === false && selectedPage === "Services"
                     ? "underlined text-red transition"
                     : "transition"
                 }

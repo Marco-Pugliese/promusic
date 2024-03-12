@@ -152,7 +152,7 @@ const InfoPage = () => {
         <Container
           fluid
           id="scrivici"
-          className="d-flex bg-blue align-items-center justify-content-center"
+          className="br-redDark d-flex bg-blue align-items-center justify-content-center"
         >
           <div className="text-red fs-1 ">
             <ArrowDownCircleFill className="pulsate-fwd mx-4" />

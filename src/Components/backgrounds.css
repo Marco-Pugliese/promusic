@@ -35,6 +35,9 @@
     var(--secondary-dark)
   );
 }
+.br-redDark {
+  background-color: rgb(69, 28, 28);
+}
 .bg-dark2reverse {
   background: linear-gradient(
     to top,
