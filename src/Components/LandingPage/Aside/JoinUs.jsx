@@ -28,7 +28,7 @@ const JoinUs = () => {
         }
       >
         <span className="redInHover">
-          DIVENTA NOSTRO SOCIO CON POCHI CLICK!
+          DIVENTA NOSTRO ASSOCIATO CON POCHI CLICK!
         </span>
         <div className="w-100 text-center ">
           <Link to={"/join"} className="nav-link ">

@@ -21,18 +21,21 @@ const Header = () => {
           onClick={() => {
             setSelected("Home");
           }}
-          className="ms-3 hover d-flex align-items-center fade-in"
+          className="mx-1 hover d-flex align-items-center fade-in"
         >
           <img
             src="/assets/images/logo ProMusic copia.png"
             alt="logo"
-            style={{ width: "40px" }}
+            style={{ width: "7vh" }}
           />
-          <div className="text-center fs-5 text-dark ms-2">
-            ProMusic
-            <span className="extrasmall fw-light">
-              | Associazione Culturale e Musicale
-            </span>
+          <div className="d-flex align-items-center extrasmall text-dark ms-2 l-spacing2">
+            <div className="fw-bold extrasmall l-spacing d-none d-lg-block ">
+              Promusic | Isola di Procida |{" "}
+            </div>
+            <div className="extrasmall fw-bold l-spacing">
+              {" "}
+              Associazione Culturale e Musicale
+            </div>
           </div>
         </Navbar.Brand>
         <Navbar.Toggle

@@ -6,7 +6,6 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import InfoPage from "./Components/InfoPage/InfoPage";
 import PartnerPage from "./Components/PartnerPage/PartnerPage";
-import ModuloIscrizione from "./Components/PartnerPage/ModuloIscrizione";
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <Header />
         <div className="main flex-grow-1">
           <Routes>
-            <Route path="/registration" element={<ModuloIscrizione />} />
             <Route path="/" element={<Landingpage />} />
             <Route path="/info" element={<InfoPage />} />
             <Route path="/join" element={<PartnerPage />} />

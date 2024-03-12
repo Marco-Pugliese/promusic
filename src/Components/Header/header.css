@@ -14,3 +14,11 @@
 .main {
   margin-top: 10vh;
 }
+.l-spacing {
+  letter-spacing: 0.5em;
+  font-weight: 500;
+}
+.l-spacing2 {
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
