@@ -1,18 +1,15 @@
 import { Col, Container, InputGroup, Row } from "react-bootstrap";
-import {
-  ArrowDownCircleFill,
-  Envelope,
-  PinMapFill,
-  TelephoneFill,
-} from "react-bootstrap-icons";
+import { ArrowDownCircleFill } from "react-bootstrap-icons";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import DomenicoCard from "./DomenicoCard";
+import MicheleCard from "./MicheleCard";
+import InfoEmail from "./InfoEmail";
+import InfoMap from "./InfoMap";
+import InfoPhone from "./InfoPhone";
 
 const InfoPage = () => {
   const form = useRef();
-  const [envelopeHovered, setEnvelopeHovered] = useState(false);
-  const [pinMapHovered, setPinMapHovered] = useState(false);
-  const [PhoneHovered, setPhoneHovered] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -46,101 +43,30 @@ const InfoPage = () => {
   return (
     <Container fluid onClick={() => {}} className="text-light p-0 m-0">
       <Row id="contactme">
-        <Col className="col-12 bg-infoPage">
+        <Col className="col-12 bg-infoPage text-shadow">
           <Row className="h-100 align-items-center justify-content-center">
             <Col className="col-6 text-center d-flex flex-column align-items-center justify-content-center fs-1 fw-bold text-light">
               I NOSTRI CONTATTI!
             </Col>
             <Col className="d-flex flex-column align-items-center justify-content-center">
-              <div
-                onMouseEnter={() => {
-                  setEnvelopeHovered(true);
-                }}
-                onMouseLeave={() => {
-                  setEnvelopeHovered(false);
-                }}
-                className="d-flex flex-row"
-              >
-                <Envelope
-                  className={
-                    envelopeHovered === true
-                      ? "me-2 fs-4 text-red transition"
-                      : "me-2 fs-4 text-light transition"
-                  }
-                />{" "}
-                :
-                <a
-                  className={
-                    envelopeHovered === true
-                      ? "nav-link mx-2 text-red transition"
-                      : "nav-link mx-2 text-light transition"
-                  }
-                  href="mailto:promusicisoladiprocida@esempio.com"
-                >
-                  promusicisoladiprocida@esempio.com
-                </a>
-              </div>
-              <div
-                onMouseEnter={() => {
-                  setPinMapHovered(true);
-                }}
-                onMouseLeave={() => {
-                  setPinMapHovered(false);
-                }}
-                className="d-flex flex-row"
-              >
-                <PinMapFill
-                  className={
-                    pinMapHovered === true
-                      ? "me-2 fs-4 text-red transition"
-                      : "me-2 fs-4 text-light transition"
-                  }
-                />
-                :
-                <a
-                  className={
-                    pinMapHovered === true
-                      ? "nav-link mx-2 text-red transition"
-                      : "nav-link mx-2 text-light transition"
-                  }
-                  href="https://maps.app.goo.gl/uBaKwPZRb54vLnxc6"
-                >
-                  Via Marcello Scotti, 15 - Procida(Na) - 80079
-                </a>
-              </div>
-              <div
-                onMouseEnter={() => {
-                  setPhoneHovered(true);
-                }}
-                onMouseLeave={() => {
-                  setPhoneHovered(false);
-                }}
-                className="d-flex flex-row"
-              >
-                <TelephoneFill
-                  className={
-                    PhoneHovered === true
-                      ? "me-2 fs-4 text-red transition"
-                      : "me-2 fs-4 text-light transition"
-                  }
-                />{" "}
-                :
-                <a
-                  className={
-                    PhoneHovered === true
-                      ? "nav-link mx-2 text-red transition"
-                      : "nav-link mx-2 text-light transition"
-                  }
-                  href="call:+390123456789"
-                >
-                  +39 0123456789
-                </a>
-              </div>
+              <InfoEmail />
+              <InfoMap />
+              <InfoPhone />
             </Col>
           </Row>
         </Col>
       </Row>
-
+      <Row className="bg-light2 border-bottom-red justify-content-center pb-5 text-dark ">
+        <Col className="col-12 fw-bold fs-2 text-center pt-5 pb-2 text-shadow-light">
+          CHI SIAMO?
+        </Col>
+        <Col className="text-center col-8 col-md-5 mt-4 col-xl-4 col-xxl-3 px-4">
+          <MicheleCard />
+        </Col>
+        <Col className="text-center col-8 col-md-5 mt-4 col-xl-4 col-xxl-3 px-4">
+          <DomenicoCard />
+        </Col>
+      </Row>
       <form
         ref={form}
         onSubmit={(e) => {
@@ -154,7 +80,7 @@ const InfoPage = () => {
           id="scrivici"
           className="br-redDark d-flex bg-blue align-items-center justify-content-center"
         >
-          <div className="text-red fs-1 ">
+          <div className="text-red fs-1 text-shadow-red ">
             <ArrowDownCircleFill className="pulsate-fwd mx-4" />
             INVIACI UNA MAIL{" "}
             <ArrowDownCircleFill className="pulsate-fwd mx-4" />

@@ -1,11 +1,32 @@
 .redShadowinHover:hover {
-  box-shadow: 0px 0px 20px 10px rgb(69, 28, 28);
+  box-shadow: 0px 0px 20px 10px rgba(69, 28, 28, 0.29);
   cursor: pointer;
   padding: 1px;
   text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
-  background: rgba(230, 114, 114, 0.8);
+  background: rgba(242, 142, 142, 0.8);
 }
 .redShadowinHover {
   transition: all 0.6s;
   background: whitesmoke;
+}
+.myCard {
+  border: 2px solid whitesmoke;
+  border-radius: 8px;
+  min-height: 20vh;
+  transition: 0.8s;
+}
+.myCard:hover {
+  background: rgba(242, 142, 142, 0.4);
+  cursor: pointer;
+}
+.carouselRow .carousel-indicators,
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+.v60 {
+  height: 60vh;
+}
+.minv60 {
+  min-height: 60vh;
 }

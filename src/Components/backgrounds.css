@@ -19,47 +19,13 @@
 .bg-dark1 {
   background-color: var(--secondary-dark);
 }
-.bg-dark2 {
-  background: linear-gradient(
-    to bottom,
-    rgb(69, 28, 28),
-    rgb(69, 28, 28),
-    var(--secondary-dark)
-  );
-}
-.bg-dark3 {
-  background: linear-gradient(
-    to right,
-    transparent,
-    transparent,
-    var(--secondary-dark)
-  );
-}
-.br-redDark {
-  background-color: rgb(69, 28, 28);
-}
-.bg-dark2reverse {
-  background: linear-gradient(
-    to top,
-    rgb(69, 28, 28),
-    rgb(69, 28, 28),
-    var(--secondary-dark)
-  );
-}
-.bg-dark3reverse {
-  background: linear-gradient(
-    to left,
-    transparent,
-    transparent,
-    var(--secondary-dark)
-  );
-}
+
 .bg-dark2opposite {
   background: linear-gradient(
     to bottom,
-    var(--secondary-dark),
-    var(--secondary-dark),
-    rgb(69, 28, 28)
+    whitesmoke,
+    whitesmoke,
+    rgb(115, 111, 111)
   );
 }
 .bg-dark3opposite {
@@ -67,9 +33,12 @@
     to right,
     transparent 50%,
     transparent 51%,
-    rgb(69, 28, 28),
-    rgb(69, 28, 28)
+    rgb(115, 111, 111),
+    rgb(115, 111, 111)
   );
+}
+.bg-light2 {
+  background: whitesmoke;
 }
 .bg-light2faded {
   background: linear-gradient(to right, var(--secondary-dark), whitesmoke);
@@ -94,10 +63,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 50vw;
-}
-.v60 {
-  height: 60vh;
+  width: 100vw;
 }
 
 #contactme {

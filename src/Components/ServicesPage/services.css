@@ -1,0 +1,76 @@
+#services {
+  width: 200vw;
+}
+
+.containerDiv {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.scroll,
+.scroll2 {
+  display: flex;
+  align-items: center;
+}
+.scroll img,
+.scroll2 img {
+  filter: grayscale(1);
+  transition: 0.3s;
+  width: 200px;
+}
+
+.scroll div img,
+.scroll div,
+.scroll2 div img,
+.scroll2 div {
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.scroll img:hover,
+.scroll2 img:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+}
+
+.scroll {
+  animation: scroll1 15s linear infinite;
+}
+@keyframes scroll1 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.scroll2 {
+  animation: scroll2 15s linear infinite;
+}
+@keyframes scroll2 {
+  0% {
+    transform: translate(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.heroService {
+  letter-spacing: 0.4em;
+}
+
+.border-dark2 {
+  border-bottom: 50px solid var(--secondary-dark);
+}
+.dark2-text {
+  color: var(--secondary-dark);
+}
+img.calendar {
+  min-width: 450px;
+}
+.light-shadow {
+  text-shadow: 0px 0px 10px rgba(245, 245, 245, 0.3);
+}

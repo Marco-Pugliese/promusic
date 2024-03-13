@@ -1,1 +1,14 @@
-
+.nameonpic {
+  position: relative;
+  top: -4.5vh;
+  background: #000000cb;
+}
+.border-bottom-red {
+  border-bottom: 5px solid indianred;
+}
+.text-shadow-light {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+.text-shadow-red {
+  text-shadow: 0 2px 10px rgba(205, 92, 92, 0.693);
+}

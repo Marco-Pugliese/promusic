@@ -1,72 +1,220 @@
-import { useEffect, useState } from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 const ServicesPage = () => {
-  const [scrollTop, setScrollTop] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = (event) => {
-      setScrollTop(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <>
-      <Row className="bg-dark1">
-        <Col
-          className={
-            scrollTop === 0
-              ? "text-center display-4 fw-bold fade-in py-4"
-              : "d-none"
-          }
-        >
-          I Nostri Corsi
-        </Col>
-      </Row>
-      <Row
-        className={
-          scrollTop === 0
-            ? "text-center fade-in justify-content-center bg-dark1"
-            : "d-none bg-dark1"
-        }
-      >
-        <Col className="col-3 text-center">
+      <Container fluid id="services" className="p-0 m-0">
+        <Row className="bg-dark1">
+          <Col className=" text-center  py-4 minv60">
+            <Row>
+              <Col className="col-6 fw-bold fs-3 heroService text-shadow-red">
+                I NOSTRI SERVIZI
+              </Col>
+              <div className="containerDiv py-5">
+                <div className="scroll">
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic2.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic3.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic4.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic5.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic6.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic7.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic8.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic9.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                </div>
+                <div className="scroll2">
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic2.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic3.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic4.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic5.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic6.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic7.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic8.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="./assets/images/picsPromusic/promusic9.jpeg "
+                      alt="promusic"
+                    />
+                  </div>
+                </div>
+              </div>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+      <Container fluid className="minv60 bg-light2 ">
+        <section className="m-0 p-0">
           <Row>
-            <Col className="col-12 fw-bold fs-4 py-2 text-main nav-scale hover">
-              Corsi In Programma
-            </Col>
-            <Col className="smaller text-start">
-              <ul>
-                <li>Corso 1: Ogni Lunedì, 17:00-18:00</li>
-                <li>Corso 2: Ogni Martedì, 17:00-18:00</li>
-                <li>Corso 3: Ogni Mercoledì, 17:00-18:00</li>
-                <li>Corso 4: Ogni Giovedì, 17:00-18:00</li>
-                <li>Corso 5: Ogni Venerdì, 17:00-18:00</li>
-                <li>Corso 6: Ogni Sabato, 17:00-18:00</li>
-              </ul>
+            <Col className=" col-12 fw-bold fs-5 py-4 dark2-text text-center heroService border-dark2 text-shadow">
+              PRENOTA LA SALA
             </Col>
           </Row>
-        </Col>
-        <Col className="col-6 text-center">
-          <Row>
-            <Col className="col-12 fw-bold fs-4 py-2 text-main hover">
-              Calendario Sala
-            </Col>
-            <Col>
-              <img
-                src="/assets/images/minimal-style-2024-new-year-calendar-template-office-desk-wall-vector_1017-48214.avif"
-                alt="calendar"
-                style={{ width: "300px" }}
-              />
+          <Row className="justify-content-center">
+            <Col className="col-12 col-lg-10 col-xxl-8">
+              <Row>
+                <Col className="col-6 dark2-text heroService p-5">
+                  Diventa Associato & Richiedi la Sala con il tuo codice!
+                  <div className="w-100 text-center mt-5">
+                    <span className="hover myBtn1 px-2 py-1 rounded-4">
+                      Prenota
+                    </span>
+                  </div>
+                </Col>
+                <Col className="col-6 text-center">
+                  <img
+                    src="./assets/images/images/calendarioesempio.avif"
+                    alt="calendar"
+                    className="w-100 calendar"
+                  />
+                </Col>
+              </Row>
             </Col>
           </Row>
-        </Col>
-      </Row>
+        </section>
+        <section className="p-0 m-0">
+          <Row>
+            <Col className=" col-12 fw-bold fs-5 py-4  light-text light-shadow text-center heroService bg-dark1 ">
+              I NOSTRI EVENTI
+            </Col>
+          </Row>
+          <Row className="justify-content-center">
+            <Col className="col-12 col-lg-10 col-xxl-8">
+              <Row>
+                <Col className="col-6 dark2-text heroService p-5">
+                  Controlla il nostro calendario Eventi
+                  <div className="w-100 text-center mt-5">
+                    <span className="hover myBtn1 px-2 py-1 rounded-4">
+                      Controlla
+                    </span>
+                  </div>
+                </Col>
+                <Col className="col-6 dark2-text heroService p-5">
+                  Oppure guarda le photoGallery degli eventi passati
+                  <div className="w-100 text-center mt-5">
+                    <span className="hover myBtn2 px-2 py-1 rounded-4">
+                      PhotoGallery
+                    </span>
+                  </div>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </section>{" "}
+        <section className="p-0 m-0">
+          <Row>
+            <Col className=" col-12 fw-bold fs-5 py-4  light-text light-shadow text-center heroService bg-dark1 ">
+              I NOSTRI CORSI
+            </Col>
+          </Row>
+          <Row className="justify-content-center">
+            <Col className="col-12 col-lg-10 col-xxl-8">
+              <Row>
+                <Col className="col-6 dark2-text heroService p-5">
+                  Scegli il corso che preferisci e Richiedi l'iscrizione
+                  <div className="w-100 text-center mt-5">
+                    <span className="hover myBtn1 px-2 py-1 rounded-4">
+                      Visualizza
+                    </span>
+                  </div>
+                </Col>
+                <Col className="col-6 text-center">
+                  <img
+                    src="./assets/images/images/calendarioesempio.avif"
+                    alt="calendar"
+                    className="w-100 calendar"
+                  />
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </section>
+      </Container>
     </>
   );
 };

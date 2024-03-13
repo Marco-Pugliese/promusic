@@ -6,6 +6,7 @@ import { Route, Routes } from "react-router-dom";
 import Footer from "./Components/Footer/Footer";
 import InfoPage from "./Components/InfoPage/InfoPage";
 import PartnerPage from "./Components/PartnerPage/PartnerPage";
+import ServicesPage from "./Components/ServicesPage/ServicesPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Landingpage />} />
             <Route path="/info" element={<InfoPage />} />
             <Route path="/join" element={<PartnerPage />} />
+            <Route path="/services" element={<ServicesPage />} />
           </Routes>
         </div>
         <Footer />

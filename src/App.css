@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,500;1,6..12,600;1,6..12,700&display=swap");
-@import url("./Components/bg-transition.css");
 @import url("./Components/backgrounds.css");
 @import url("./Components/animations.css");
 @import url("./Components/Header/header.css");
@@ -8,6 +7,8 @@
 @import url("./Components/InfoPage/info.css");
 @import url("./Components/LandingPage/Aside/aside.css");
 @import url("./Components/PartnerPage/partnerpage.css");
+@import url("./Components/ServicesPage/services.css");
+
 :root {
   --primary-dark: #212121;
   --secondary-dark: #161f1e;
@@ -183,6 +184,9 @@ textarea:focus {
   transition: all 0.8s;
   outline: none !important;
   box-shadow: none !important;
+}
+textarea {
+  height: 10vh !important;
 }
 .salaProve {
   border: 5px solid #ffffffbc;
