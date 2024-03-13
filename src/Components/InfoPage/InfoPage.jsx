@@ -21,6 +21,7 @@ const InfoPage = () => {
     email !== "" && subject !== "" && name !== "" && message.length > 0
       ? setIsEverythingChecked(true)
       : setIsEverythingChecked(false);
+    console.log(email, subject, name, message);
   };
 
   const sendEmail = () => {
@@ -86,7 +87,7 @@ const InfoPage = () => {
             <ArrowDownCircleFill className="pulsate-fwd mx-4" />
           </div>
         </Container>
-        <Container>
+        <Container className="">
           <Row>
             <Col className="col-12 col-lg-6 ">
               <InputGroup className="mt-4">
