@@ -15,8 +15,14 @@
   margin-top: 10vh;
 }
 .l-spacing {
-  letter-spacing: 0.5em;
+  letter-spacing: 0.25em;
+  transition: 0.8s;
   font-weight: 500;
+}
+@media screen and (min-width: 600px) {
+  .l-spacing {
+    letter-spacing: 0.5em;
+  }
 }
 .l-spacing2 {
   letter-spacing: 0.1em;

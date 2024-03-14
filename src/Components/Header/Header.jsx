@@ -24,14 +24,14 @@ const Header = () => {
           onClick={() => {
             switchSectionAction("Home");
           }}
-          className="mx-1 hover d-flex align-items-center fade-in"
+          className="m-0 p-0 hover d-flex align-items-center fade-in"
         >
           <img
             src="/assets/images/logo ProMusic copia.png"
             alt="logo"
-            style={{ width: "7vh" }}
+            style={{ width: "6vh" }}
           />
-          <div className="d-flex align-items-center extrasmall text-dark ms-2 l-spacing2">
+          <div className="d-flex align-items-center extrasmall text-dark ms-1 l-spacing2">
             <div className="fw-bold extrasmall l-spacing d-none d-lg-block ">
               Promusic | Isola di Procida |{" "}
             </div>
