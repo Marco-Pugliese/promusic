@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import {
   Envelope,
   Facebook,
+  HeartFill,
   Instagram,
   Telephone,
 } from "react-bootstrap-icons";
@@ -13,7 +14,11 @@ const Footer = () => {
     <div id="footer" className="pt-5">
       <div className="pt-5">
         <Container className="text-center navHover2 py-3 smaller">
-          <span>
+          <span className="me-5 ">
+            Made with <HeartFill className="mx-2 text-red" /> by Marco Pugliese
+          </span>
+          |
+          <span className="ms-5">
             Associazione Culturale e Musicale ©ProMusic. All rights reserved -{" "}
             <span className="small">{today.getFullYear()}</span>
           </span>

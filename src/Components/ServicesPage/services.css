@@ -34,7 +34,7 @@
 }
 
 .scroll {
-  animation: scroll1 15s linear infinite;
+  animation: scroll1 18s linear infinite;
 }
 @keyframes scroll1 {
   0% {
@@ -46,7 +46,7 @@
   }
 }
 .scroll2 {
-  animation: scroll2 15s linear infinite;
+  animation: scroll2 18s linear infinite;
 }
 @keyframes scroll2 {
   0% {

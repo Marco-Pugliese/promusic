@@ -141,3 +141,35 @@
 .filter-black:hover {
   background-color: #212121ee;
 }
+.bg-Events {
+  background: url("../../public/assets/images/backgrounds/livemusic.avif");
+  background-size: cover;
+  background-position: center;
+}
+.bg-Corsi {
+  background: url("../../public/assets/images/backgrounds/microfono.avif");
+  filter: grayscale(1);
+  min-height: 90vh;
+  background-size: cover;
+  background-position: right;
+  transition: 2s;
+}
+@media screen and (min-width: 1050px) {
+  .bg-Corsi {
+    filter: grayscale(0);
+  }
+}
+.minv90 {
+  min-height: 90vh;
+}
+.v90 {
+  height: 90vh;
+}
+.filter-black2 {
+  background: linear-gradient(
+    to right,
+
+    var(--secondary-dark),
+    rgba(22, 31, 30, 0.5) 150%
+  );
+}

@@ -12,3 +12,12 @@
 .text-shadow-red {
   text-shadow: 0 2px 10px rgba(205, 92, 92, 0.693);
 }
+.fs-fluid {
+  font-size: 1.8em;
+  transition: 0.8s;
+}
+@media screen and (max-width: 700px) {
+  .fs-fluid {
+    font-size: 1.4em;
+  }
+}

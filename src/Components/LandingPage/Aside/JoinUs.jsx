@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { ArrowDownCircleFill } from "react-bootstrap-icons";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { switchSectionAction } from "../../../redux/Actions";
 
 const JoinUs = () => {
   const [isShown, setIsShown] = useState(false);
+  const dispatch = useDispatch();
 
   return (
     <div id="joinUs" className="mt-2">
@@ -31,7 +34,13 @@ const JoinUs = () => {
           UNISCITI ALLA NOSTRA ASSOCIAZIONE CON POCHI CLICK!
         </span>
         <div className="w-100 text-center ">
-          <Link to={"/join"} className="nav-link ">
+          <Link
+            to={"/join"}
+            className="nav-link "
+            onClick={() => {
+              dispatch(switchSectionAction("JoinUs"));
+            }}
+          >
             <span
               className={
                 isShown === true

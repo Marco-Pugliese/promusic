@@ -67,3 +67,124 @@
 .myBtn3:hover {
   background-color: indianred !important;
 }
+.flicker-in-1 {
+  animation: flicker-in-1 4s linear both;
+}
+.spacing-1 {
+  transition: 1s;
+  letter-spacing: 0.2em;
+}
+@media screen and (max-width: 600px) {
+  .spacing-1 {
+    letter-spacing: 0.1em;
+  }
+}
+@keyframes flicker-in-1 {
+  0% {
+    opacity: 0;
+    font-size: 0.7em;
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 0.2;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.5;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    color: whitesmoke;
+  }
+  30.1% {
+    opacity: 0.8;
+    color: var(--primary-yellow);
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+    color: var(--primary-yellow);
+  }
+  45.1% {
+    opacity: 1;
+    color: whitesmoke;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+    color: whitesmoke;
+  }
+  55.1% {
+    opacity: 0;
+    color: indianred;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+    color: indianred;
+  }
+  60.1% {
+    opacity: 0;
+    color: whitesmoke;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    font-size: 1em;
+    color: whitesmoke;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+}

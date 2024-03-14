@@ -1,6 +1,10 @@
 import { Col, Row } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { switchSectionAction } from "../../../redux/Actions";
 
 const CorsiEMaster = () => {
+  const dispatch = useDispatch();
   return (
     <Row className="p-0 m-0">
       <Col className="col-12 col-lg-6 p-0 m-0 img-corsi">
@@ -10,7 +14,15 @@ const CorsiEMaster = () => {
           ratione consequuntur qui voluptatem maxime molestias blanditiis quas
           voluptatum vitae cupiditate."
           <div className="mt-4">
-            <button className="btn btn-dark fw-bold">CORSI && MASTER</button>
+            <Link
+              onClick={() => {
+                dispatch(switchSectionAction("Services"));
+              }}
+              to="./services/courses"
+              className="nav-link fst-normal"
+            >
+              <div className="btn btn-dark fw-bold">CORSI && MASTER</div>
+            </Link>
           </div>
         </div>
       </Col>
@@ -20,7 +32,15 @@ const CorsiEMaster = () => {
         consequuntur qui voluptatem maxime molestias blanditiis quas voluptatum
         vitae cupiditate."
         <div className="mt-4">
-          <button className="btn btn-dark fw-bold">CORSI && MASTER</button>
+          <Link
+            onClick={() => {
+              dispatch(switchSectionAction("Services"));
+            }}
+            to="./services/courses"
+            className="nav-link fst-normal"
+          >
+            <div className="btn btn-dark fw-bold">CORSI && MASTER</div>
+          </Link>
         </div>
       </Col>
     </Row>

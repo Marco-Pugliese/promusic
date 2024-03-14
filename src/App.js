@@ -7,6 +7,8 @@ import Footer from "./Components/Footer/Footer";
 import InfoPage from "./Components/InfoPage/InfoPage";
 import PartnerPage from "./Components/PartnerPage/PartnerPage";
 import ServicesPage from "./Components/ServicesPage/ServicesPage";
+import Events from "./Components/EventsPage/Events";
+import CorsiEMasterPage from "./Components/CoursesPage/CorsiEMasterPage";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
             <Route path="/info" element={<InfoPage />} />
             <Route path="/join" element={<PartnerPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services/events" element={<Events />} />
+            <Route path="/services/courses" element={<CorsiEMasterPage />} />
           </Routes>
         </div>
         <Footer />

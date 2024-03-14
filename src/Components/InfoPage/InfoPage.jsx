@@ -81,10 +81,10 @@ const InfoPage = () => {
           id="scrivici"
           className="br-redDark d-flex bg-blue align-items-center justify-content-center"
         >
-          <div className="text-red fs-1 text-shadow-red ">
-            <ArrowDownCircleFill className="pulsate-fwd mx-4" />
-            INVIACI UNA MAIL{" "}
-            <ArrowDownCircleFill className="pulsate-fwd mx-4" />
+          <div className="text-red text-shadow-red d-flex align-items-center">
+            <ArrowDownCircleFill className="pulsate-fwd fs-2 mx-4" />
+            <span className="fs-fluid">INVIACI UNA MAIL</span>
+            <ArrowDownCircleFill className="pulsate-fwd fs-2 mx-4" />
           </div>
         </Container>
         <Container className="">
@@ -98,6 +98,7 @@ const InfoPage = () => {
                   Nome
                 </InputGroup.Text>
                 <input
+                  autoComplete="OFF"
                   type="text"
                   required
                   name="user_name"
@@ -122,6 +123,7 @@ const InfoPage = () => {
                   eMail
                 </InputGroup.Text>
                 <input
+                  autoComplete="OFF"
                   type="email"
                   className="bg-transparent text-gray form-control"
                   aria-label="email"
@@ -145,6 +147,7 @@ const InfoPage = () => {
                   Oggetto
                 </InputGroup.Text>
                 <input
+                  autoComplete="OFF"
                   required
                   className="bg-transparent text-gray form-control"
                   aria-label="subject"
@@ -166,6 +169,7 @@ const InfoPage = () => {
                   Testo
                 </InputGroup.Text>
                 <textarea
+                  autoComplete="OFF"
                   required
                   className="bg-transparent text-gray form-control"
                   as="textarea"
@@ -183,13 +187,13 @@ const InfoPage = () => {
               <>
                 {showSend && (
                   <div className="alert alert-success mt-3" role="alert">
-                    Your message has been sent properly!
+                    Il tuo messaggio è stato inviato correttamente!
                   </div>
                 )}
                 {showError && (
                   <div className="alert alert-danger mt-3" role="alert">
-                    Oooops. We had a problem on delivering your message, try
-                    again!
+                    Oooops. Sembra ci sia stato un problema nella consegna del
+                    messaggio. Riprova
                   </div>
                 )}
               </>
