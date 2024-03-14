@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const today = new Date();
   return (
-    <div id="footer" className="pt-5">
+    <div id="footer" className="pt-5 v-60">
       <div className="pt-5">
         <Container className="text-center navHover2 py-3 smaller">
           <span className="me-5 ">
