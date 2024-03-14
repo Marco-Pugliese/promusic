@@ -9,13 +9,30 @@
   --primary-yellow: #f3b803;
 }
 .bg-proMusic {
-  background-image: url("../../public/assets/images/images/vinilenero\ copia\ 2.jpeg");
+  background-image: url("../../public/assets/images/images/vinilenero.jpeg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
   height: 37.5vh;
-  transition: all 1.2s;
+  transition: 1.2s;
 }
+.bg-proMusic2 {
+  background-image: url("../../public/assets/images/images/vinilenero\ copia.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 37.5vh;
+  transition: 1.2s;
+}
+.bg-proMiddle {
+  transition: 1.2s;
+  background-color: #161f1e;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 13vh;
+}
+
 .bg-dark1 {
   background-color: var(--secondary-dark);
 }
@@ -43,21 +60,7 @@
 .bg-light2faded {
   background: linear-gradient(to right, var(--secondary-dark), whitesmoke);
 }
-.bg-proMusic2 {
-  background-image: url("../../public/assets/images/images/vinilenero\ copia\ 3.jpeg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top;
-  height: 37.5vh;
-}
-.bg-proMiddle {
-  /* background-image: url("../../public/assets/images/images/duechitarre.jpeg"); */
-  background-color: #161f1e;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 13vh;
-}
+
 .bg-partner {
   background: url("../../public/assets/images/tuba-gd72895bc6_1280.jpeg");
   background-size: cover;

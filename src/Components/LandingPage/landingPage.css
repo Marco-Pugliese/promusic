@@ -13,6 +13,22 @@
   letter-spacing: 2em;
   color: var(--primary-gray);
   font-weight: bold;
-  transition: 0.8s;
+  transition: 1.8s;
   text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.533);
+}
+@media screen and (max-width: 850px) {
+  #heroFrase {
+    letter-spacing: 1.5em;
+  }
+}
+@media screen and (max-width: 600px) {
+  #heroFrase {
+    letter-spacing: 1em;
+  }
+  .bg-proMusic {
+    background-image: url("../../../public/assets/images/images/vinilenero\ copia\ 2.jpeg");
+  }
+  .bg-proMusic2 {
+    background-image: url("../../../public/assets/images/images/vinilenero\ copia\ 3.jpeg");
+  }
 }
