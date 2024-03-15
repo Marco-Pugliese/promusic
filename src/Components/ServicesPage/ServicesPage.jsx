@@ -1,5 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import SlidingImages from "./SlidingImages";
+import { Link } from "react-router-dom";
 
 const ServicesPage = () => {
   return (
@@ -31,9 +32,11 @@ const ServicesPage = () => {
                 <Col className="col-6 dark2-text heroService p-5">
                   Diventa Associato & Richiedi la Sala con il tuo codice!
                   <div className="w-100 text-center mt-5">
-                    <span className="hover myBtn1 px-2 py-1 rounded-4">
-                      Prenota
-                    </span>
+                    <Link to={"/services/sala&recording"} className="nav-link">
+                      <span className="hover myBtn1 px-2 py-1 rounded-4">
+                        Prenota
+                      </span>
+                    </Link>
                   </div>
                 </Col>
                 <Col className="col-6 text-center">
@@ -59,17 +62,21 @@ const ServicesPage = () => {
                 <Col className="col-6 dark2-text heroService p-5">
                   Controlla il nostro calendario Eventi
                   <div className="w-100 text-center mt-5">
-                    <span className="hover myBtn1 px-2 py-1 rounded-4">
-                      Controlla
-                    </span>
+                    <Link to={"/services/events"} className="nav-link">
+                      <span className="hover myBtn1 px-2 py-1 rounded-4">
+                        Controlla
+                      </span>
+                    </Link>
                   </div>
                 </Col>
                 <Col className="col-6 dark2-text heroService p-5">
                   Oppure guarda le photoGallery degli eventi passati
                   <div className="w-100 text-center mt-5">
-                    <span className="hover myBtn2 px-2 py-1 rounded-4">
-                      PhotoGallery
-                    </span>
+                    <Link to={"/services/events"} className="nav-link">
+                      <span className="hover myBtn2 px-2 py-1 rounded-4">
+                        PhotoGallery
+                      </span>
+                    </Link>
                   </div>
                 </Col>
               </Row>
@@ -88,9 +95,11 @@ const ServicesPage = () => {
                 <Col className="col-6 dark2-text heroService p-5">
                   Scegli il corso che preferisci e Richiedi l'iscrizione
                   <div className="w-100 text-center mt-5">
-                    <span className="hover myBtn1 px-2 py-1 rounded-4">
-                      Visualizza
-                    </span>
+                    <Link to={"/services/courses"} className="nav-link">
+                      <span className="hover myBtn1 px-2 py-1 rounded-4">
+                        Visualizza
+                      </span>
+                    </Link>
                   </div>
                 </Col>
                 <Col className="col-6 text-center">

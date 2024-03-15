@@ -1,3 +1,10 @@
-.bg-dark1 li {
+li {
   list-style-type: none;
+}
+.transparent {
+  opacity: 0.1;
+}
+.transition1s {
+  opacity: 1;
+  transition: 0.9s;
 }

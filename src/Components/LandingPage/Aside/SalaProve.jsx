@@ -1,6 +1,10 @@
 import { Col, Row } from "react-bootstrap";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { switchSectionAction } from "../../../redux/Actions";
 
 const SalaProve = () => {
+  const dispatch = useDispatch();
   return (
     <Row className="p-0 m-0">
       <Col className="col-6  m-0 p-0 d-none d-lg-flex flex-column align-items-center justify-content-center fst-italic vhX">
@@ -9,7 +13,15 @@ const SalaProve = () => {
         consequuntur qui voluptatem maxime molestias blanditiis quas voluptatum
         vitae cupiditate."
         <div className="mt-4">
-          <button className="btn btn-dark fw-bold">SALA PROVE</button>
+          <Link
+            onClick={() => {
+              dispatch(switchSectionAction("Services"));
+            }}
+            to="./services/sala&recording"
+            className="nav-link fst-normal"
+          >
+            <div className="btn btn-dark fw-bold">SALA PROVE</div>
+          </Link>
         </div>
       </Col>
       <Col className="col-12 col-lg-6 p-0 m-0 img-piano">
@@ -19,7 +31,15 @@ const SalaProve = () => {
           ratione consequuntur qui voluptatem maxime molestias blanditiis quas
           voluptatum vitae cupiditate."
           <div className="mt-4">
-            <button className="btn btn-dark fw-bold">SALA PROVE</button>
+            <Link
+              onClick={() => {
+                dispatch(switchSectionAction("Services"));
+              }}
+              to="./services/sala&recording"
+              className="nav-link fst-normal"
+            >
+              <div className="btn btn-dark fw-bold">SALA PROVE</div>
+            </Link>
           </div>
         </div>
       </Col>

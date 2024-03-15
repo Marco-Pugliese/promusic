@@ -14,14 +14,16 @@ const Footer = () => {
     <div id="footer" className="pt-5 v-60">
       <div className="pt-5">
         <Container className="text-center navHover2 py-3 smaller">
-          <span className="me-5 ">
+          <div className="extrasmall">
             Made with <HeartFill className="mx-2 text-red" /> by Marco Pugliese
-          </span>
-          |
-          <span className="ms-5">
-            Associazione Culturale e Musicale ©ProMusic. All rights reserved -{" "}
-            <span className="small">{today.getFullYear()}</span>
-          </span>
+          </div>
+
+          <div className="smaller">
+            <span>
+              Associazione Culturale e Musicale ©ProMusic. All rights reserved -{" "}
+            </span>
+            <span>{today.getFullYear()}</span>
+          </div>
         </Container>
         <Container className="d-flex border-topGreen  ">
           <div className=" fs-4 text-center w-100 extrasmall">

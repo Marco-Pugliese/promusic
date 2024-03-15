@@ -9,6 +9,7 @@ import PartnerPage from "./Components/PartnerPage/PartnerPage";
 import ServicesPage from "./Components/ServicesPage/ServicesPage";
 import Events from "./Components/EventsPage/Events";
 import CorsiEMasterPage from "./Components/CoursesPage/CorsiEMasterPage";
+import SalaERecordingPage from "./Components/SalaERecordingPage/SalaERecordingPage";
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/services/events" element={<Events />} />
             <Route path="/services/courses" element={<CorsiEMasterPage />} />
+            <Route
+              path="/services/sala&recording"
+              element={<SalaERecordingPage />}
+            />
           </Routes>
         </div>
         <Footer />

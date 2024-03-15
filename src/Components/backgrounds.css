@@ -173,3 +173,32 @@
     rgba(22, 31, 30, 0.5) 150%
   );
 }
+.bg-disco {
+  /* background-image: url("../../public/assets/images/images/grammofono.webp"); */
+  background-image: url("../../public/assets/images/images/viniledettaglio2.jpeg");
+  /* background-image: url("../../public/assets/images/images/vinilepunta2.webp"); */
+  /* background-image: url("../../public/assets/images/images/vinili.avif"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.v60-2 {
+  height: 75vh;
+}
+@media screen and (min-width: 800px) {
+  .v60-2 {
+    height: 90vh;
+  }
+}
+.bg-mixer {
+  background-image: url("../../public/assets/images/backgrounds/bassplayer.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-lights {
+  background-image: url("../../public/assets/images/backgrounds/mixerluci.avif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
