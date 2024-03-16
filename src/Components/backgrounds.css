@@ -70,7 +70,7 @@
 }
 
 #contactme {
-  height: 65vh;
+  min-height: 65vh;
   background-image: url("../../public/assets/images/images/nastro.webp");
   background-size: 100vh;
   background-repeat: repeat-x;

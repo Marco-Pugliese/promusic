@@ -1,15 +1,17 @@
 import { Col, Container, Row } from "react-bootstrap";
 import SlidingImages from "./SlidingImages";
-import { Link } from "react-router-dom";
+import PrenotaLaSala from "./PrenotaLaSala";
+import INostriCorsi from "./INostriCorsi";
+import NostriEventi from "./NostriEventi";
 
 const ServicesPage = () => {
   return (
     <>
       <Container fluid id="services" className="p-0 m-0">
-        <Row className="bg-dark1">
-          <Col className=" text-center  py-4 minv60">
+        <Row className="bg-dark1 p-0 m-0">
+          <Col className=" text-center py-4 minv60">
             <Row>
-              <Col className="col-6 fw-bold fs-3 heroService text-shadow-red">
+              <Col className="col-12 col-lg-6 fw-bold fs-3 heroService text-shadow-red">
                 I NOSTRI SERVIZI
               </Col>
               <div className="containerDiv py-5">
@@ -19,100 +21,10 @@ const ServicesPage = () => {
           </Col>
         </Row>
       </Container>
-      <Container fluid className="minv60 bg-light2 ">
-        <section className="m-0 p-0">
-          <Row>
-            <Col className=" col-12 fw-bold fs-5 py-4 dark2-text text-center heroService border-dark2 text-shadow">
-              PRENOTA LA SALA
-            </Col>
-          </Row>
-          <Row className="justify-content-center">
-            <Col className="col-12 col-lg-10 col-xxl-8">
-              <Row>
-                <Col className="col-6 dark2-text heroService p-5">
-                  Diventa Associato & Richiedi la Sala con il tuo codice!
-                  <div className="w-100 text-center mt-5">
-                    <Link to={"/services/sala&recording"} className="nav-link">
-                      <span className="hover myBtn1 px-2 py-1 rounded-4">
-                        Prenota
-                      </span>
-                    </Link>
-                  </div>
-                </Col>
-                <Col className="col-6 text-center">
-                  <img
-                    src="./assets/images/images/calendarioesempio.avif"
-                    alt="calendar"
-                    className="w-100 calendar"
-                  />
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </section>
-        <section className="p-0 m-0">
-          <Row>
-            <Col className=" col-12 fw-bold fs-5 py-4  light-text light-shadow text-center heroService bg-dark1 ">
-              I NOSTRI EVENTI
-            </Col>
-          </Row>
-          <Row className="justify-content-center">
-            <Col className="col-12 col-lg-10 col-xxl-8">
-              <Row>
-                <Col className="col-6 dark2-text heroService p-5">
-                  Controlla il nostro calendario Eventi
-                  <div className="w-100 text-center mt-5">
-                    <Link to={"/services/events"} className="nav-link">
-                      <span className="hover myBtn1 px-2 py-1 rounded-4">
-                        Controlla
-                      </span>
-                    </Link>
-                  </div>
-                </Col>
-                <Col className="col-6 dark2-text heroService p-5">
-                  Oppure guarda le photoGallery degli eventi passati
-                  <div className="w-100 text-center mt-5">
-                    <Link to={"/services/events"} className="nav-link">
-                      <span className="hover myBtn2 px-2 py-1 rounded-4">
-                        PhotoGallery
-                      </span>
-                    </Link>
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </section>{" "}
-        <section className="p-0 m-0">
-          <Row>
-            <Col className=" col-12 fw-bold fs-5 py-4  light-text light-shadow text-center heroService bg-dark1 ">
-              I NOSTRI CORSI
-            </Col>
-          </Row>
-          <Row className="justify-content-center">
-            <Col className="col-12 col-lg-10 col-xxl-8">
-              <Row>
-                <Col className="col-6 dark2-text heroService p-5">
-                  Scegli il corso che preferisci e Richiedi l'iscrizione
-                  <div className="w-100 text-center mt-5">
-                    <Link to={"/services/courses"} className="nav-link">
-                      <span className="hover myBtn1 px-2 py-1 rounded-4">
-                        Visualizza
-                      </span>
-                    </Link>
-                  </div>
-                </Col>
-                <Col className="col-6 text-center">
-                  <img
-                    src="./assets/images/images/calendarioesempio.avif"
-                    alt="calendar"
-                    className="w-100 calendar"
-                  />
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </section>
+      <Container fluid className="minv60 bg-light2 p-0 m-0">
+        <PrenotaLaSala />
+        <NostriEventi />
+        <INostriCorsi />
       </Container>
     </>
   );

@@ -42,7 +42,7 @@ const InfoPage = () => {
   };
 
   return (
-    <Container fluid onClick={() => {}} className="text-light p-0 m-0">
+    <Container fluid className="text-light p-0 m-0">
       <Row id="contactme">
         <Col className="col-12 bg-infoPage text-shadow">
           <Row className="h-100 align-items-center justify-content-center">

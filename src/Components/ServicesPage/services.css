@@ -62,9 +62,6 @@
   letter-spacing: 0.4em;
 }
 
-.border-dark2 {
-  border-bottom: 50px solid var(--secondary-dark);
-}
 .dark2-text {
   color: var(--secondary-dark);
 }
@@ -73,4 +70,7 @@ img.calendar {
 }
 .light-shadow {
   text-shadow: 0px 0px 10px rgba(245, 245, 245, 0.3);
+}
+.ls-normal {
+  letter-spacing: 0.1em;
 }
