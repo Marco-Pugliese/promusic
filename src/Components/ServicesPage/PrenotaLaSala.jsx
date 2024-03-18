@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 const PrenotaLaSala = () => {
   return (
-    <section className="m-0 p-0">
-      <Row>
-        <Col className=" col-12 fw-bold fs-5 py-4 dark2-text text-center heroService text-shadow">
+    <>
+      <Row className="p-0 m-0">
+        <Col className="p-0 m-0 col-12 fw-bold fs-5 py-4 dark2-text text-center heroService text-shadow">
           PRENOTA LA SALA
         </Col>
       </Row>
-      <Row className="justify-content-center">
-        <Col className="col-12 col-lg-10 col-xxl-8">
-          <Row>
-            <Col className="col-12 col-lg-6 text-center">
+      <Row className="justify-content-center p-0 m-0">
+        <Col className="col-12 col-lg-10 col-xxl-8 p-0 m-0">
+          <Row className="p-0 m-0">
+            <Col className="col-12 col-lg-6 text-center p-0 m-0">
               <img
                 src="./assets/images/images/calendarioesempio.avif"
                 alt="calendar"
@@ -32,7 +32,7 @@ const PrenotaLaSala = () => {
           </Row>
         </Col>
       </Row>
-    </section>
+    </>
   );
 };
 export default PrenotaLaSala;

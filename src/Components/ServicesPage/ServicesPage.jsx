@@ -21,7 +21,7 @@ const ServicesPage = () => {
           </Col>
         </Row>
       </Container>
-      <Container fluid className="minv60 bg-light2 p-0 m-0">
+      <Container fluid className="minv60 bg-light2 p-0 m-0 ">
         <PrenotaLaSala />
         <NostriEventi />
         <INostriCorsi />

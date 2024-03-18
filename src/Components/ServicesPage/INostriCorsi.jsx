@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const INostriCorsi = () => {
   return (
-    <section className="p-0 m-0">
+    <>
       <Row>
         <Col className=" col-12 fw-bold fs-5 py-4  light-text light-shadow text-center heroService bg-dark1 ">
           I NOSTRI CORSI
@@ -32,7 +32,7 @@ const INostriCorsi = () => {
           </Row>
         </Col>
       </Row>
-    </section>
+    </>
   );
 };
 export default INostriCorsi;
