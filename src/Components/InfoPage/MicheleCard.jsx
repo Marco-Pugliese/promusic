@@ -5,8 +5,8 @@ const MicheleCard = () => {
     <Card className="shadow-lg">
       <Card.Img
         variant="top"
-        src="./assets/images/images/duechitarre.jpeg"
-        className="w-100"
+        src="./assets/images/picsPromusic/michele.jpeg"
+        className="w-100 filterBW"
       />
       <span className="text-light py-2 nameonpic fw-bold">
         Michele Lubrano Lavadera

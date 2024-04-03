@@ -21,3 +21,11 @@
     font-size: 1.4em;
   }
 }
+.filterBW {
+  filter: grayscale(1);
+  transition: 1.2s;
+}
+.filterBW:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+}
