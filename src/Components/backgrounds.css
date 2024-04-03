@@ -202,3 +202,8 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.bg-statuto {
+  width: 80vw !important;
+  transform: translateX(-27vw);
+  height: 95vh !important;
+}

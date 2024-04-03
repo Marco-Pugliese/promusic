@@ -1,7 +1,25 @@
+/* eslint-disable jsx-a11y/alt-text */
 import { useRef, useState } from "react";
-import { Carousel, Col, Container, InputGroup, Row } from "react-bootstrap";
+import {
+  Carousel,
+  Col,
+  Container,
+  InputGroup,
+  Modal,
+  Row,
+} from "react-bootstrap";
 import emailjs from "@emailjs/browser";
+import { Check } from "react-bootstrap-icons";
 const PartnerPage = () => {
+  const iscrizione =
+    "/assets/images/picsPromusic/Modulo Iscrizione Promusic.pdf";
+  const [hasBeenViewed, sethasBeenViewed] = useState(false);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const [show2, setShow2] = useState(false);
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
   const form = useRef();
   const [name, setName] = useState("");
   const [cognome, setCognome] = useState("");
@@ -25,6 +43,7 @@ const PartnerPage = () => {
     checkbox === true &&
     via !== "" &&
     CAP !== "" &&
+    hasBeenViewed === true &&
     natoA !== "" &&
     natoIl !== ""
       ? setIsEverythingChecked(true)
@@ -86,9 +105,11 @@ const PartnerPage = () => {
                 nella pagina seguendo le istruzioni per diventare socio e
                 iniziate il tuo viaggio musicale con noi!
                 <div className="text-center mt-5">
-                  <span className="bg-light2 mt-5 text-dark redShadowinHover rounded-3 py-1 px-3 display-inline-block">
-                    Scarica
-                  </span>
+                  <a href={iscrizione} className="nav-link p-0 m-0" download>
+                    <span className="bg-light2 mt-5 text-dark redShadowinHover rounded-3 py-1 px-3 display-inline-block">
+                      Scarica
+                    </span>
+                  </a>
                 </div>
               </div>
               <div className="minv60 p-5 text-center d-lg-none fw-bold">
@@ -459,13 +480,41 @@ const PartnerPage = () => {
                       id="basic-addon1"
                     >
                       Dopo aver
-                      <span className="myBtn1 text-dark px-2 mx-2 py-1 mt-4 hover rounded-3">
+                      <span
+                        className={
+                          hasBeenViewed === false
+                            ? "myBtn1 text-dark px-2 mx-2 py-1 mt-4 hover rounded-3"
+                            : "myBtn1 text-dark px-2 mx-2 py-1 mt-4 hover rounded-3 bg-success text-white"
+                        }
+                        onClick={() => {
+                          sethasBeenViewed(true);
+                          handleShow2();
+                        }}
+                      >
                         visionato
                       </span>
-                      lo statuto
+                      lo statuto{" "}
+                      <span className="smaller">
+                        {" "}
+                        <>{hasBeenViewed === false ? "*" : <Check />}</>
+                      </span>
                     </div>
                   </div>
                 </Col>
+                <Modal
+                  show={show2}
+                  onHide={handleClose2}
+                  className="text-dark smaller d-flex justify-content-center"
+                >
+                  <Modal.Body className="bg-white bg-statuto ">
+                    <object
+                      width="100%"
+                      height="100%"
+                      data="./assets/images/picsPromusic/Statuto Associazione - ProMusic Isola di Procida.pdf"
+                      type="application/pdf"
+                    ></object>
+                  </Modal.Body>
+                </Modal>
                 <Col className="col-12 ">
                   <hr />
                   <div className="my-2">
@@ -495,16 +544,31 @@ const PartnerPage = () => {
                   <div className="mt-3 d-flex flex-column">
                     <div className="w-100">
                       E di impegnarsi al pagamento d'iscrizione tramite bonifico
-                      della quota associativa di euro: 20,00 (Venti)
+                      della quota associativa di euro: 10,00 (Dieci) entro 10
+                      giorni dalla risposta alla richiesta di iscrizione
                     </div>
                     <div className="mt-2">
-                      <span className="myBtn1 hover text-dark px-2 py-1 mt-1 rounded-3">
+                      <span
+                        className="myBtn1 hover text-dark px-2 py-1 mt-1 rounded-3"
+                        onClick={handleShow}
+                      >
                         Dati per il Bonifico
                       </span>
                     </div>
                   </div>
                 </Col>
-
+                <Modal
+                  show={show}
+                  onHide={handleClose}
+                  className="text-dark smaller"
+                >
+                  <Modal.Header closeButton>
+                    Banca CREDEM Agenzia Credito Emiliano sede di Procida
+                  </Modal.Header>
+                  <Modal.Body className="fw-bold">
+                    IBAN: IT96N0303240110010000414838
+                  </Modal.Body>
+                </Modal>
                 <>
                   {showSend && (
                     <div className="alert alert-success mt-3" role="alert">
