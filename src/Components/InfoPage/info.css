@@ -24,6 +24,8 @@
 .filterBW {
   filter: grayscale(1);
   transition: 1.2s;
+  min-height: 25vh;
+  max-height: 34vh;
 }
 .filterBW:hover {
   filter: grayscale(0);
