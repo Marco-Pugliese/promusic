@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 import { ArrowRight } from "react-bootstrap-icons";
 import emailjs from "@emailjs/browser";
+import CalendarioinModal from "../SalaERecordingPage/CalendarioinModal";
 
 const CorsiEMasterPage = () => {
   const form = useRef();
@@ -52,9 +53,9 @@ const CorsiEMasterPage = () => {
             <Col className="col-12 col-lg-6 text-center d-flex align-items-center flex-column justify-content-center v90 my-auto fs-3 px-5 filter-black filter-black2">
               " Esplora le nostre proposte, iscriviti ai nostri Corsi e
               perfeziona le tue passioni "
-              <div className="fs-6 mt-4 btn-light btn hover bg-light2 text-dark2 px-3 py-2 rounded-4 border border-2 ">
-                Visualizza Calendario
-              </div>
+              <span className="mt-5 fs-6">
+                <CalendarioinModal />
+              </span>
             </Col>
           </Row>
         </Container>

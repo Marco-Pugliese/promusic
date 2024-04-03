@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import SlidingImages from "./SlidingImages";
 import PrenotaLaSala from "./PrenotaLaSala";
 import INostriCorsi from "./INostriCorsi";
-import NostriEventi from "./NostriEventi";
+// import NostriEventi from "./NostriEventi";
 
 const ServicesPage = () => {
   return (
@@ -23,7 +23,7 @@ const ServicesPage = () => {
       </Container>
       <Container fluid className="minv60 bg-light2 p-0 m-0 ">
         <PrenotaLaSala />
-        <NostriEventi />
+        {/* <NostriEventi /> */}
         <INostriCorsi />
       </Container>
     </>

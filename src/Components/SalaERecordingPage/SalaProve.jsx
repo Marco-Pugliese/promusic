@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
+import CalendarioinModal from "./CalendarioinModal";
 
 const SalaProve = () => {
   const [salaHovered, setSalaHovered] = useState(false);
   const [salaHoveredSmall, setSalaHoveredSmall] = useState(false);
+
   return (
     <div className="p-0 m-0 w-100 text-dark2">
       <Row className="p-0 m-0">
@@ -23,9 +25,7 @@ const SalaProve = () => {
           <div className="fw-bold spacing-1 fs-4 border-bottom">Malù</div>
           <div className="spacing-1 fw-light">la nostra sala prove</div>
           <div className=" fw-bold mt-5 d-flex flex-column align-items-center justify-content-center">
-            <span className="hover myBtn1 text-dark2 px-3 py-2 rounded-4">
-              Prenota la Sala
-            </span>
+            <CalendarioinModal />
           </div>
         </Col>
         <Col
@@ -58,9 +58,8 @@ const SalaProve = () => {
               <div>
                 <div className="spacing-1">Pricing:</div>
                 <div className="smaller my-5 spacing-1">10€/h</div>
-                <span className="hover myBtn1 text-dark2 px-3 py-2 rounded-4">
-                  Prenota la Sala
-                </span>
+
+                <CalendarioinModal />
               </div>
             </div>
           </div>

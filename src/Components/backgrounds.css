@@ -207,3 +207,11 @@
   transform: translateX(-27vw);
   height: 95vh !important;
 }
+.calendarioINIFRAME {
+  height: 75vh;
+  width: 150%;
+  transform: translateX(-16%);
+}
+#warningBox {
+  display: none !important;
+}

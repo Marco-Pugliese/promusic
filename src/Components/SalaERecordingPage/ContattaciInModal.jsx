@@ -41,7 +41,7 @@ const ContattaciInModal = () => {
   return (
     <>
       <span
-        className="myBtn2 text-dark2 px-3 py-2 rounded-4"
+        className="myBtn2 text-dark2 px-3 py-2 rounded-4 fw-bold"
         onClick={handleShow}
       >
         Contattaci!
@@ -58,7 +58,7 @@ const ContattaciInModal = () => {
             </span>
             <span className="fs-6">
               <span className="smaller">
-                Associazione Culturale e Musicale ProMusic
+                Associazione Culturale & Musicale ProMusic
               </span>
             </span>
           </Modal.Title>
@@ -216,7 +216,7 @@ const ContattaciInModal = () => {
                           setMessage("");
                         }}
                       >
-                        Cancel
+                        Clear
                       </button>
                     </Col>
                   </Row>
